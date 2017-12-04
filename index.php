@@ -13,7 +13,6 @@
             <span class="logo"><a href="#">Team Juneau: Assignment #9</a></span>
             <ul>
                 <li><span>Go to: </span></li>
-                <li><a class="menu-link" href="#location">Food Locations</a></li>
                 <li><a class="menu-link" href="#about">About</a></li>
                 <li><a class="menu-link" href="#survey">Survey</a></li>
                 <li><a class="menu-link" href="#credits">Credits</a></li>
@@ -28,32 +27,6 @@
                 <span class="tagline">University of Rochester Dining provides more than just your average dining experience. We strive to provide our customers with the best service, experience and most importanly, the most delicious cuisine!</span>
             </div>
         </section>
-
-         <section id="location">
-         <div class="row align-items-center">
-                <div class="column col-md-10 col-sm-10 col-xs-12">
-                    <h2>Food Locations</h2>
-                    <span class="tagline">University of Rochester's 6 Food Location Options. These locations are located throughout the River Campus. </span>
-                </div>
-        </div><br>
-        <div class="row">
-                <div class="column col-md-4 col-sm- col-xs-12">
-                    <h3>Danforth Dining Center</h3>
-                    <p>Our Fresh Food Company offers fresh and delicious options five days a week. At this residential, all-you-care-to-eat facility, each station features inspired menu options and fresh ingredients that can be customized to your preference. Danforth also boasts a variety of specialty stations designed to satisfy unique dietary needs and preferences with a dedicated vegan station and a made-without-gluten station. Additionally, Danforth offers Halal options and is a completely nut-free facility.</p>
-        </div>
-
-                <div class="column col-md-4 col-sm-3 col-xs-12">
-                    <h3>Douglas Dining Center</h3>
-                    <p>The Douglass Dining Center provides a variety of options at every turn. Five unique micro-restaurants serve a blend of global fare in a casual contemporary setting. Our Kosher Comfort station offers delicious Kosher comfort fare such as whole-roasted meats and sides, along with a full NYC-style deli with made-to-order sandwiches from our house-cured meats. The Kosher Comfort station is supervised by our on-campus mashgiach to comply with kashrut laws. The Free station located in Douglass delivers fresh, clean entrées and sides devoid of the top eight food allergens and gluten. There is also a separate gluten-free pantry in Douglass offering a variety of meals and snacks. For hearty, home-style flavors and campus favorites stop by the Bistro station, or visit Street, which delivers authentic, globally-inspired dishes with endless variety. Topping it all off is out Just Desserts area with sweet treats, ice cream, locally roasted coffee from Java’s and more.</p>
-        </div>
-
-                <div class="column col-md-4 col-sm-3 col-xs-12">
-                    <h3>Pit Food Court</h3>
-                    <p>This food court offers a variety of choices for breakfast, lunch and dinner. Choose from bagels, cut fruit, and breakfast sandwiches in the morning to exciting, locally-sourced grilled selections, pizza, globally-inspired bowls, burritos and salads. Be sure to check our two newest concepts, Wok On Up, an Asian-fusion concept, and the new Rocky’s Sub Shop. The Pit also offers a fully-stocked salad bar, quick to-go options including sandwiches, Nathan’s soups, sushi, and locally-prepared desserts.</p>
-                </div>   
-        </div>
-        </section>
-
 
         <section id="about">
             <div class="row align-items-center">
