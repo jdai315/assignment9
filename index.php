@@ -148,98 +148,152 @@
                             <legend>Survey Questionnaire</legend>
 
                             <h5>1. What is your campus status?</h5>
-                            
+                            <div class="col-md-6 mb-3">
                             <input type="radio" name="status" id="on-campus-select" value="on-campus">
-                            <label for="on-campus-select">Student living on campus</label><br>
+                            <label for="on-campus-select">Student living on campus</label>
+                            </div>
 
+                            <div class="col-md-6 mb-3">
                             <input type="radio" name="status" id="off-campus-select" value="off-campus">
-                            <label for="off-campus-select">Student living off campus</label><br>
+                            <label for="off-campus-select">Student living off campus</label>
+                            </div>
 
+                            <div class="col-md-6 mb-3">
                             <input type="radio" name="status" id="faculty-select" value="faculty">
-                            <label for="faculty-select">Faculty</label><br>
+                            <label for="faculty-select">Faculty</label>
+                            </div>
 
+                            <div class="col-md-6 mb-3">
                             <input type="radio" name="status" id="staff-select" value="staff">
-                            <label for="staff-select">Staff</label><br>
+                            <label for="staff-select">Staff</label>
+                            </div>
 
+                            <div class="col-md-6 mb-3">
                             <input type="radio" name="status" id="other-select1" value="other">
-                            <label for="other-select1">Other</label><br>
+                            <label for="other-select1">Other</label>
+                            </div>
 
                             <h5>2. Which food location did you visit?</h5>
-                            
+                            <div class="col-md-6 mb-3">
                             <input type="checkbox" name="location1" id="danforth-check" value="danforth">
-                            <label for="danforth-check">Danforth Dining Center</label><br>
+                            <label for="danforth-check">Danforth Dining Center</label>
+                            </div>
 
+                            <div class="col-md-6 mb-3">
                             <input type="checkbox" name="location2" id="douglass-check" value="douglass">
-                            <label for="douglass-check">Douglass Dining Center</label><br>
+                            <label for="douglass-check">Douglass Dining Center</label>
+                            </div>
 
+                            <div class="col-md-6 mb-3">
                             <input type="checkbox" name="location4" id="pit-check" value="pit">
-                            <label for="pit-check">The Pit - Wilson Commons</label><br>
+                            <label for="pit-check">The Pit - Wilson Commons</label>
+                            </div>
 
-                            <h5><label for="message">Why do you visit the location(s) that you chose</label></h5>
-
-                            <textarea name="message" class="form-control" id="message"></textarea><br>
+                            <div class="form-group">
+                            <div class="col-md-6 mb-3">
+                            <label for="message">Please explain why you chose those food location(s)</label>
+                            <br>
+                            <textarea name="message" class="form-control" id="message"></textarea>
+                            </div>
+                            </div>
 
                             <h5>3. Please rate the quality of customer service</h5>
                             
+                            <div class="col-md-6 mb-3">
                             <input type="radio" name="service" id="excellent-select" value="excellent">
-                            <label for="excellent-select">Excellent</label><br>
+                            <label for="excellent-select">Excellent</label>
+                            </div>
 
+                            <div class="col-md-6 mb-3">
                             <input type="radio" name="service id="very-good-select" value="very-good">
-                            <label for="very-good-select">Very good</label><br>
+                            <label for="very-good-select">Very good</label>
+                            </div>
 
+                            <div class="col-md-6 mb-3">
                             <input type="radio" name="service" id="good-select" value="good">
-                            <label for="good-select">Good</label><br>
+                            <label for="good-select">Good</label>
+                            </div>
 
+                            <div class="col-md-6 mb-3">
                             <input type="radio" name="service" id="fair-select" value="fair">
-                            <label for="fair-select">Fair</label><br>
+                            <label for="fair-select">Fair</label>
+                            </div>
 
+                            <div class="col-md-6 mb-3">
                             <input type="radio" name="service" id="poor-select" value="poor">
-                            <label for="poor-select">Poor</label><br>
+                            <label for="poor-select">Poor</label>
+                            </div>
 
                             <h5>4. Please rate the quality of culinary talent</h5>
                             
+                            <div class="col-md-6 mb-3">
                            <input type="radio" name="talent" id="excellent-select" value="excellent">
-                            <label for="excellent-select">Excellent</label><br>
+                            <label for="excellent-select">Excellent</label>
+                            </div>
 
+                            <div class="col-md-6 mb-3">
                             <input type="radio" name="talent" id="very-good-select" value="very-good">
-                            <label for="very-good-select">Very good</label><br>
+                            <label for="very-good-select">Very good</label>
+                            </div>
 
+                            <div class="col-md-6 mb-3">
                             <input type="radio" name="talent" id="good-select" value="good">
-                            <label for="good-select">Good</label><br>
+                            <label for="good-select">Good</label>
+                            </div>
 
+                            <div class="col-md-6 mb-3">
                             <input type="radio" name="talent" id="fair-select" value="fair">
-                            <label for="fair-select">Fair</label><br>
+                            <label for="fair-select">Fair</label>
+                            </div>
 
+                            <div class="col-md-6 mb-3">
                             <input type="radio" name="talent" id="poor-select" value="poor">
-                            <label for="poor-select">Poor</label><br>
+                            <label for="poor-select">Poor</label>
+                            </div>
 
                             <h5>5. If you seldom or never buy food on campus, where do you usually get the food that you eat while on campus?</h5>
                             
+                            <div class="col-md-6 mb-3">
                             <input type="radio" name="eat" id="take-from-home-select" value="take-from-home">
-                            <label for="take-from-home-select">Take from home</label><br>
+                            <label for="take-from-home-select">Take from home</label>
+                            </div>
 
+                            <div class="col-md-6 mb-3">
                             <input type="radio" name="eat" id="restaurants-select" value="restaurants">
-                            <label for="restaurants-select">Restaurants</label><br>
+                            <label for="restaurants-select">Restaurants</label>
+                            </div>
 
+                            <div class="col-md-6 mb-3">
                             <input type="radio" name="eat" id="fast-food-select" value="fast-food">
-                            <label for="fast-food-select">Fast food</label><br>
+                            <label for="fast-food-select">Fast food</label>
+                            </div>
 
+                            <div class="col-md-6 mb-3">
                             <input type="radio" name="eat" id="bakery-select" value="bakery">
-                            <label for="bakery-select">Bakery</label><br>
+                            <label for="bakery-select">Bakery</label>
+                            </div>
 
                             <h5>6. How late do you think the cafeteria should be open?</h5>
                             
+                            <div class="col-md-6 mb-3">
                             <input type="radio" name="cafeteria" id="7pm-select" value="7pm">
-                            <label for="7pm-select">7pm</label><br>
+                            <label for="7pm-select">7pm</label>
+                            </div>
 
+                            <div class="col-md-6 mb-3">
                             <input type="radio" name="cafeteria" id="8pm-select" value="8pm">
-                            <label for="8pm-select">8pm</label><br>
+                            <label for="8pm-select">8pm</label>
+                            </div>
 
+                            <div class="col-md-6 mb-3">
                             <input type="radio" name="cafeteria" id="9pm-select" value="9pm">
-                            <label for="9pm-select">9pm</label><br>
+                            <label for="9pm-select">9pm</label>
+                            </div>
 
+                            <div class="col-md-6 mb-3">
                             <input type="radio" name="cafeteria" id="other-select3" value="other">
-                            <label for="other-select3">Other</label><br>
+                            <label for="other-select3">Other</label>
+                            </div>
                             
                         </fieldset>
 
