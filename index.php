@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
         <title>CSC 174 | Team Juneau | Assignment 9</title>
     </head>
     <body>
@@ -12,6 +13,7 @@
             <span class="logo"><a href="#">Team Juneau: Assignment #9</a></span>
             <ul>
                 <li><span>Go to: </span></li>
+                <li><a class="menu-link" href="#location">Food Locations</a></li>
                 <li><a class="menu-link" href="#about">About</a></li>
                 <li><a class="menu-link" href="#survey">Survey</a></li>
                 <li><a class="menu-link" href="#credits">Credits</a></li>
@@ -26,6 +28,32 @@
                 <span class="tagline">University of Rochester Dining provides more than just your average dining experience. We strive to provide our customers with the best service, experience and most importanly, the most delicious cuisine!</span>
             </div>
         </section>
+
+         <section id="location">
+         <div class="row align-items-center">
+                <div class="column col-md-10 col-sm-10 col-xs-12">
+                    <h2>Food Locations</h2>
+                    <span class="tagline">University of Rochester's 6 Food Location Options. These locations are located throughout the River Campus. </span>
+                </div>
+        </div><br>
+        <div class="row">
+                <div class="column col-md-4 col-sm- col-xs-12">
+                    <h3>Danforth Dining Center</h3>
+                    <p>Our Fresh Food Company offers fresh and delicious options five days a week. At this residential, all-you-care-to-eat facility, each station features inspired menu options and fresh ingredients that can be customized to your preference. Danforth also boasts a variety of specialty stations designed to satisfy unique dietary needs and preferences with a dedicated vegan station and a made-without-gluten station. Additionally, Danforth offers Halal options and is a completely nut-free facility.</p>
+        </div>
+
+                <div class="column col-md-4 col-sm-3 col-xs-12">
+                    <h3>Douglas Dining Center</h3>
+                    <p>The Douglass Dining Center provides a variety of options at every turn. Five unique micro-restaurants serve a blend of global fare in a casual contemporary setting. Our Kosher Comfort station offers delicious Kosher comfort fare such as whole-roasted meats and sides, along with a full NYC-style deli with made-to-order sandwiches from our house-cured meats. The Kosher Comfort station is supervised by our on-campus mashgiach to comply with kashrut laws. The Free station located in Douglass delivers fresh, clean entrées and sides devoid of the top eight food allergens and gluten. There is also a separate gluten-free pantry in Douglass offering a variety of meals and snacks. For hearty, home-style flavors and campus favorites stop by the Bistro station, or visit Street, which delivers authentic, globally-inspired dishes with endless variety. Topping it all off is out Just Desserts area with sweet treats, ice cream, locally roasted coffee from Java’s and more.</p>
+        </div>
+
+                <div class="column col-md-4 col-sm-3 col-xs-12">
+                    <h3>Pit Food Court</h3>
+                    <p>This food court offers a variety of choices for breakfast, lunch and dinner. Choose from bagels, cut fruit, and breakfast sandwiches in the morning to exciting, locally-sourced grilled selections, pizza, globally-inspired bowls, burritos and salads. Be sure to check our two newest concepts, Wok On Up, an Asian-fusion concept, and the new Rocky’s Sub Shop. The Pit also offers a fully-stocked salad bar, quick to-go options including sandwiches, Nathan’s soups, sushi, and locally-prepared desserts.</p>
+                </div>   
+        </div>
+        </section>
+
 
         <section id="about">
             <div class="row align-items-center">
@@ -87,6 +115,9 @@
             </div>
         </section>
 
+        <section>
+        </section>
+
         <section id="survey">
             
             <div class="row align-items-center">
@@ -141,45 +172,46 @@
                             <input type="checkbox" name="location2" id="douglass-check" value="douglass">
                             <label for="douglass-check">Douglass Dining Center</label><br>
 
-                            <input type="checkbox" name="location3" id="eastman-check" value="eastman">
-                            <label for="eastman-check">Eastman Dining Center</label><br>
-
                             <input type="checkbox" name="location4" id="pit-check" value="pit">
                             <label for="pit-check">The Pit - Wilson Commons</label><br>
 
-                            <input type="checkbox" name="location5" id="rocky-check" value="rocky">
-                            <label for="rocky-check">Rocky's Sub Shop</label><br>
+                            <h5><label for="message">Why do you visit the location(s) that you chose</label></h5>
+
+                            <textarea name="message" class="form-control" id="message"></textarea><br>
 
                             <h5>3. Please rate the quality of customer service</h5>
                             
-                            <input type="radio" name="quality" id="excellent-select" value="excellent">
+                            <input type="radio" name="service" id="excellent-select" value="excellent">
                             <label for="excellent-select">Excellent</label><br>
 
-                            <input type="radio" name="quality" id="very-good-select" value="very-good">
+                            <input type="radio" name="service id="very-good-select" value="very-good">
                             <label for="very-good-select">Very good</label><br>
 
-                            <input type="radio" name="quality" id="good-select" value="good">
+                            <input type="radio" name="service" id="good-select" value="good">
                             <label for="good-select">Good</label><br>
 
-                            <input type="radio" name="quality" id="fair-select" value="fair">
+                            <input type="radio" name="service" id="fair-select" value="fair">
                             <label for="fair-select">Fair</label><br>
 
-                            <input type="radio" name="quality" id="poor-select" value="poor">
+                            <input type="radio" name="service" id="poor-select" value="poor">
                             <label for="poor-select">Poor</label><br>
 
-                            <h5>4. How often do you purchase food on campus?</h5>
+                            <h5>4. Please rate the quality of culinary talent</h5>
                             
-                            <input type="radio" name="purchase" id="never-select" value="never">
-                            <label for="never-select">Never</label><br>
+                           <input type="radio" name="talent" id="excellent-select" value="excellent">
+                            <label for="excellent-select">Excellent</label><br>
 
-                            <input type="radio" name="purchase" id="less-than-once-a-month-select" value="less-than-once-a-month">
-                            <label for="less-than-once-a-month-select">Less than once a month</label><br>
+                            <input type="radio" name="talent" id="very-good-select" value="very-good">
+                            <label for="very-good-select">Very good</label><br>
 
-                            <input type="radio" name="purchase" id="1-3-times-a-month-select" value="1-3-times-a-month">
-                            <label for="1-3-times-a-month-select">1-3 times a month</label><br>
+                            <input type="radio" name="talent" id="good-select" value="good">
+                            <label for="good-select">Good</label><br>
 
-                            <input type="radio" name="purchase" id="1-3-times-per-week-select" value="1-3-times-per-week">
-                            <label for="1-3-times-per-week-select">1-3 times per week</label><br>
+                            <input type="radio" name="talent" id="fair-select" value="fair">
+                            <label for="fair-select">Fair</label><br>
+
+                            <input type="radio" name="talent" id="poor-select" value="poor">
+                            <label for="poor-select">Poor</label><br>
 
                             <h5>5. If you seldom or never buy food on campus, where do you usually get the food that you eat while on campus?</h5>
                             
@@ -195,25 +227,7 @@
                             <input type="radio" name="eat" id="bakery-select" value="bakery">
                             <label for="bakery-select">Bakery</label><br>
 
-                            <h5>6. Do you have special dietary needs?</h5>
-                            <input type="radio" name="dietary" id="yes-select" value="yes">
-                            <label for="yes-select">Yes</label><br>
-
-                            <input type="radio" name="dietary" id="no-select" value="no">
-                            <label for="no-select">No</label><br>
-
-                            <h5>7. If yes, please indicate which special dietary needs that you have.</h5>
-                            
-                            <input type="radio" name="special-dietary" id="diabetic-diet-select" value="diabetic-diet">
-                            <label for="diabetic-diet-select">Diabetic diet</label><br>
-
-                            <input type="radio" name="special-dietary" id="low-cholesterol-select" value="low-cholesterol">
-                            <label for="low-cholesterol-select">Low cholesterol</label><br>
-
-                            <input type="radio" name="special-dietary" id="other-select2" value="other">
-                            <label for="other-select2">Other</label><br>
-
-                            <h5>8. How late do you think the cafeteria should be open?</h5>
+                            <h5>6. How late do you think the cafeteria should be open?</h5>
                             
                             <input type="radio" name="cafeteria" id="7pm-select" value="7pm">
                             <label for="7pm-select">7pm</label><br>
