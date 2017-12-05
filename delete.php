@@ -12,7 +12,6 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
 <?php
 // Create a database connection
 require_once 'config.php';
-
 $id = $_POST ['id'];
 
 
@@ -75,5 +74,6 @@ $result = mysqli_query($mysqli, $query);
 </html>
 
 <?php
+//close database connection
 mysqli_close($mysqli);
 ?>
