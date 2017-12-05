@@ -102,15 +102,15 @@
                     <form method="post" action="survey-processor.php">
 
                         <label for="name">Name:</label>
-                        <input type="text" name="name" id="name">
+                        <input type="text" name="name" id="name" required>
                         <br><br>
 
                         <label for="email">Email:</label>
-                        <input type="text" name="email" id="email">
+                        <input type="text" name="email" id="email" required>
                         <br><br>
 
                         <label for="phone">Telephone:</label>
-                        <input type="text" name="phone" id="phone">
+                        <input type="text" name="phone" id="phone" required>
                         <br><br>
 
                         <fieldset>
@@ -134,7 +134,7 @@
                             <input type="radio" name="status" id="other-select1" value="other">
                             <label for="other-select1">Other</label><br>
 
-                            <h5>2. Which food location did you visit?</h5>
+                            <h5>2. Which dining locations do you visit?</h5>
                             
                             <input type="checkbox" name="location1" id="danforth-check" value="danforth">
                             <label for="danforth-check">Danforth Dining Center</label><br>
@@ -151,13 +151,10 @@
                             <input type="checkbox" name="location5" id="rocky-check" value="rocky">
                             <label for="rocky-check">Rocky's Sub Shop</label><br>
 
-                            <h5>3. Please rate the quality of customer service</h5>
+                            <h5>3. Please rate the overall quality of customer service at our dining locations</h5>
                             
                             <input type="radio" name="quality" id="excellent-select" value="excellent">
                             <label for="excellent-select">Excellent</label><br>
-
-                            <input type="radio" name="quality" id="very-good-select" value="very-good">
-                            <label for="very-good-select">Very good</label><br>
 
                             <input type="radio" name="quality" id="good-select" value="good">
                             <label for="good-select">Good</label><br>
@@ -168,33 +165,33 @@
                             <input type="radio" name="quality" id="poor-select" value="poor">
                             <label for="poor-select">Poor</label><br>
 
-                            <h5>4. How often do you purchase food on campus?</h5>
+                            <h5>4. Do you feel dining services is open to student suggestions? </h5>
                             
-                            <input type="radio" name="purchase" id="never-select" value="never">
-                            <label for="never-select">Never</label><br>
-
-                            <input type="radio" name="purchase" id="less-than-once-a-month-select" value="less-than-once-a-month">
-                            <label for="less-than-once-a-month-select">Less than once a month</label><br>
-
-                            <input type="radio" name="purchase" id="1-3-times-a-month-select" value="1-3-times-a-month">
-                            <label for="1-3-times-a-month-select">1-3 times a month</label><br>
-
-                            <input type="radio" name="purchase" id="1-3-times-per-week-select" value="1-3-times-per-week">
-                            <label for="1-3-times-per-week-select">1-3 times per week</label><br>
-
-                            <h5>5. If you seldom or never buy food on campus, where do you usually get the food that you eat while on campus?</h5>
+                            <input type="radio" name="nutrition" id="student-yes" value="yes">
+                            <label for="student-yes">Yes</label><br>
                             
-                            <input type="radio" name="eat" id="take-from-home-select" value="take-from-home">
-                            <label for="take-from-home-select">Take from home</label><br>
+                            <input type="radio" name="nutrition" id="student-yes2" value="yes2">
+                            <label for="student-yes2">Yes, but could be better</label><br>
+                            
+                            <input type="radio" name="nutrition" id="student-yes3" value="yes3">
+                            <label for="student-yes3">Yes, but I don't reach out</label><br>
 
-                            <input type="radio" name="eat" id="restaurants-select" value="restaurants">
-                            <label for="restaurants-select">Restaurants</label><br>
+                            <input type="radio" name="nutrition" id="student-no" value="no">
+                            <label for="student-no">No</label><br>
 
-                            <input type="radio" name="eat" id="fast-food-select" value="fast-food">
-                            <label for="fast-food-select">Fast food</label><br>
+                            <input type="radio" name="nutrition" id="student-na" value="na">
+                            <label for="student-na">Not sure</label><br>
 
-                            <input type="radio" name="eat" id="bakery-select" value="bakery">
-                            <label for="bakery-select">Bakery</label><br>
+                            <h5>5. Does the university provide enough healthy food options?</h5>
+                            
+                            <input type="radio" name="nutrition" id="nutrition-yes" value="yes">
+                            <label for="nutrition-yes">Yes</label><br>
+
+                            <input type="radio" name="nutrition" id="nutrition-no" value="no">
+                            <label for="nutrition-no">No</label><br>
+
+                            <input type="radio" name="nutrition" id="nutrition-na" value="na">
+                            <label for="nutrition-na">Not sure</label><br>
 
                             <h5>6. Do you have special dietary needs?</h5>
                             <input type="radio" name="dietary" id="yes-select" value="yes">
@@ -208,29 +205,35 @@
                             <input type="radio" name="special-dietary" id="diabetic-diet-select" value="diabetic-diet">
                             <label for="diabetic-diet-select">Diabetic diet</label><br>
 
-                            <input type="radio" name="special-dietary" id="low-cholesterol-select" value="low-cholesterol">
-                            <label for="low-cholesterol-select">Low cholesterol</label><br>
+                            <input type="radio" name="special-dietary" id="allergies-select" value="allergies">
+                            <label for="allergies-select">Allergies</label><br>
+                            
+                            <input type="radio" name="special-dietary" id="religious-select" value="religious">
+                            <label for="religious-select">Religious Restrictions</label><br>
+                            
+                            <input type="radio" name="special-dietary" id="dietary-select" value="dietary">
+                            <label for="diertary-select">Personal Dietary Restrictions</label><br>
 
                             <input type="radio" name="special-dietary" id="other-select2" value="other">
                             <label for="other-select2">Other</label><br>
 
-                            <h5>8. How late do you think the cafeteria should be open?</h5>
+                            <h5>8. How important is it for us to use sustainable foods?</h5>
                             
-                            <input type="radio" name="cafeteria" id="7pm-select" value="7pm">
-                            <label for="7pm-select">7pm</label><br>
+                            <input type="radio" name="sustainability" id="very-important" value="very-important">
+                            <label for="very-important">Very Important</label><br>
 
-                            <input type="radio" name="cafeteria" id="8pm-select" value="8pm">
-                            <label for="8pm-select">8pm</label><br>
+                            <input type="radio" name="sustainability" id="slightly-important" value="slightly-important">
+                            <label for="slightly-important">Slightly Important</label><br>
 
-                            <input type="radio" name="cafeteria" id="9pm-select" value="9pm">
-                            <label for="9pm-select">9pm</label><br>
+                            <input type="radio" name="sustainability" id="indifferent" value="indifferent">
+                            <label for="indifferent">Indifferent</label><br>
 
-                            <input type="radio" name="cafeteria" id="other-select3" value="other">
-                            <label for="other-select3">Other</label><br>
+                            <input type="radio" name="sustainability" id="not-important" value="not-important">
+                            <label for="not-important">Not that important</label><br>
                             
                         </fieldset>
 
-                        <label for="message">Comments, Questions or Concerns?</label>
+                        <label for="message">Any other comments, questions or concerns?</label>
                         <br>
                         <TEXTAREA name="message" id="message"></TEXTAREA>
                         <br>
