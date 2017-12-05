@@ -16,7 +16,7 @@ require_once 'config.php';
 $id = $_POST ['id'];
 
 
-$query = "DELETE FROM survey ";
+$query = "DELETE FROM survey_assignment_9 ";
 $query .= "WHERE id = {$id} ";
 $query .= "LIMIT 1";
 
