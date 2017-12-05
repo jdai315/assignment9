@@ -89,7 +89,7 @@
         </section>
 
         <section id="survey">
-            
+
             <div class="row align-items-center">
                 <div class="column col-md-12 col-sm-12 col-xs-12">
                     <h2>Survey</h2>
@@ -118,7 +118,7 @@
                             <legend>Survey Questionnaire</legend>
 
                             <h5>1. What is your campus status?</h5>
-                            
+
                             <input type="radio" name="status" id="on-campus-select" value="on-campus">
                             <label for="on-campus-select">Student living on campus</label><br>
 
@@ -135,7 +135,7 @@
                             <label for="other-select1">Other</label><br>
 
                             <h5>2. Which dining locations do you visit?</h5>
-                            
+
                             <input type="checkbox" name="location1" id="danforth-check" value="danforth">
                             <label for="danforth-check">Danforth Dining Center</label><br>
 
@@ -152,7 +152,7 @@
                             <label for="rocky-check">Rocky's Sub Shop</label><br>
 
                             <h5>3. Please rate the overall quality of customer service at our dining locations</h5>
-                            
+
                             <input type="radio" name="quality" id="excellent-select" value="excellent">
                             <label for="excellent-select">Excellent</label><br>
 
@@ -166,24 +166,24 @@
                             <label for="poor-select">Poor</label><br>
 
                             <h5>4. Do you feel dining services is open to student suggestions? </h5>
-                            
-                            <input type="radio" name="nutrition" id="student-yes" value="yes">
+
+                            <input type="radio" name="suggestion" id="student-yes" value="yes">
                             <label for="student-yes">Yes</label><br>
-                            
-                            <input type="radio" name="nutrition" id="student-yes2" value="yes2">
+
+                            <input type="radio" name="suggestion" id="student-yes2" value="yes2">
                             <label for="student-yes2">Yes, but could be better</label><br>
-                            
-                            <input type="radio" name="nutrition" id="student-yes3" value="yes3">
+
+                            <input type="radio" name="suggestion" id="student-yes3" value="yes3">
                             <label for="student-yes3">Yes, but I don't reach out</label><br>
 
-                            <input type="radio" name="nutrition" id="student-no" value="no">
+                            <input type="radio" name="suggestion" id="student-no" value="no">
                             <label for="student-no">No</label><br>
 
-                            <input type="radio" name="nutrition" id="student-na" value="na">
+                            <input type="radio" name="suggestion" id="student-na" value="na">
                             <label for="student-na">Not sure</label><br>
 
                             <h5>5. Does the university provide enough healthy food options?</h5>
-                            
+
                             <input type="radio" name="nutrition" id="nutrition-yes" value="yes">
                             <label for="nutrition-yes">Yes</label><br>
 
@@ -201,16 +201,16 @@
                             <label for="no-select">No</label><br>
 
                             <h5>7. If yes, please indicate which special dietary needs that you have.</h5>
-                            
+
                             <input type="radio" name="special-dietary" id="diabetic-diet-select" value="diabetic-diet">
                             <label for="diabetic-diet-select">Diabetic diet</label><br>
 
                             <input type="radio" name="special-dietary" id="allergies-select" value="allergies">
                             <label for="allergies-select">Allergies</label><br>
-                            
+
                             <input type="radio" name="special-dietary" id="religious-select" value="religious">
                             <label for="religious-select">Religious Restrictions</label><br>
-                            
+
                             <input type="radio" name="special-dietary" id="dietary-select" value="dietary">
                             <label for="diertary-select">Personal Dietary Restrictions</label><br>
 
@@ -218,7 +218,7 @@
                             <label for="other-select2">Other</label><br>
 
                             <h5>8. How important is it for us to use sustainable foods?</h5>
-                            
+
                             <input type="radio" name="sustainability" id="very-important" value="very-important">
                             <label for="very-important">Very Important</label><br>
 
@@ -230,7 +230,7 @@
 
                             <input type="radio" name="sustainability" id="not-important" value="not-important">
                             <label for="not-important">Not that important</label><br>
-                            
+
                         </fieldset>
 
                         <label for="message">Any other comments, questions or concerns?</label>
@@ -238,11 +238,11 @@
                         <TEXTAREA name="message" id="message"></TEXTAREA>
                         <br>
                         <button type="button" class="btn btn-primary"><input type="submit" value="Submit"></button>
-                        
+
                     </form>
                 </div>
             </div>
-            
+
         </section>
 
         <footer id="credits">
