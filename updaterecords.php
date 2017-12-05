@@ -189,7 +189,7 @@ include "inc/top.inc";
 
                         <TEXTAREA name="message" id="message"></TEXTAREA>
                         <br>
-                        <button type="button" class="btn btn-primary"><input type="submit" value="Submit" onclick="return confirm('Submit?')"></button>
+                        <button type="button" class="btn btn-primary"><input type="submit" value="Submit" onclick="return confirm('Are you sure you want to update?')"></button>
 
                     </form>  
 
