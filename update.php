@@ -16,7 +16,7 @@ require_once 'config.php';
 $number = $_POST['id'];
 $updatedName = Trim(stripslashes($_POST['name']));
 $updatedEmail =  Trim(stripslashes($_POST['email']));
-$updatedTelephone =  Trim(stripslashes($_POST['telephone']));
+$updatedTelephone =  Trim(stripslashes($_POST['phone']));
 
 //question1
 $statusselect=$_POST["status"];

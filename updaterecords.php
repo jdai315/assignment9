@@ -1,11 +1,11 @@
 <?php
 // Initialize the session
 session_start();
- 
+
 // If session variable is not set it will redirect to login page
 if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
-  header("location: login.php");
-  exit;
+    header("location: login.php");
+    exit;
 }
 ?>
 
@@ -55,15 +55,15 @@ $row = mysqli_fetch_assoc($result)
                             <tr><td>ID:</td><td><input readonly type="text" id="updateid1" name="id" value = "<?php echo $row["ID"]?>"></td></tr>
                             <tr><td>Name:</td><td><input type="text" id="updateid2" name="name" value = "<?php echo $row["Name"]?>"></td></tr>
                             <tr><td>Email:</td><td><input type="text" id="updateid3" name="email" value = "<?php echo $row["Email"]?>"></td></tr>
-                            <tr><td>Telephone:</td><td><input type="text" id="updateid4" name="telephone" value = "<?php echo $row["Telephone"]?>"></td></tr>
+                            <tr><td>Telephone:</td><td><input type="text" id="updateid4" name="phone" value = "<?php echo $row["Telephone"]?>"></td></tr>
                         </table>
 
                         <fieldset>
 
                             <legend>Survey Questionnaire</legend>
 
-                            <h5>1. What is your campus status?</h5>
-                            <h5>Previous Answer: <?php echo $row["CampusStatus"]?><br>
+                            <h4>1. What is your campus status?</h4>
+                            <h5>Previous Answer: <?php echo $row["CampusStatus"]?></h5><br>
 
                             <input type="radio" name="status" id="on-campus-select" value="on-campus">
                             <label for="on-campus-select">Student living on campus</label><br>
@@ -81,8 +81,8 @@ $row = mysqli_fetch_assoc($result)
                             <label for="other-select1">Other</label><br>
 
 
-                            <h5>2. Which dining locations do you visit?</h5>
-                            <h5>Previous Answer: <?php echo $row["FoodLocation"]?><br>
+                            <h4>2. Which dining locations do you visit?</h4>
+                            <h5>Previous Answer: <?php echo $row["FoodLocation"]?></h5><br>
 
                             <input type="checkbox" name="location1" id="danforth-check" value="danforth">
                             <label for="danforth-check">Danforth Dining Center</label><br>
@@ -100,7 +100,7 @@ $row = mysqli_fetch_assoc($result)
                             <label for="rocky-check">Rocky's Sub Shop</label><br>
 
                             <h5>3. Please rate the overall quality of customer service at our dining locations</h5>
-                            <h5>Previous Answer: <?php echo $row["QualityRate"]?><br>
+                            <h5>Previous Answer: <?php echo $row["QualityRate"]?></h5><br>
 
                             <input type="radio" name="quality" id="excellent-select" value="excellent">
                             <label for="excellent-select">Excellent</label><br>
@@ -114,8 +114,8 @@ $row = mysqli_fetch_assoc($result)
                             <input type="radio" name="quality" id="poor-select" value="poor">
                             <label for="poor-select">Poor</label><br>
 
-                            <h5>4. Do you feel dining services is open to student suggestions? </h5>
-                            <h5>Previous Answer: <?php echo $row["Suggestion"]?><br>
+                            <h4>4. Do you feel dining services is open to student suggestions? </h4>
+                            <h5>Previous Answer: <?php echo $row["Suggestion"]?></h5><br>
 
                             <input type="radio" name="suggestion" id="student-yes" value="yes">
                             <label for="student-yes">Yes</label><br>
@@ -132,8 +132,8 @@ $row = mysqli_fetch_assoc($result)
                             <input type="radio" name="suggestion" id="student-na" value="na">
                             <label for="student-na">Not sure</label><br>
 
-                            <h5>5. Does the university provide enough healthy food options?</h5>
-                            <h5>Previous Answer: <?php echo $row["Healthy"]?><br>
+                            <h4>5. Does the university provide enough healthy food options?</h4>
+                            <h5>Previous Answer: <?php echo $row["Healthy"]?></h5><br>
 
                             <input type="radio" name="nutrition" id="nutrition-yes" value="yes">
                             <label for="nutrition-yes">Yes</label><br>
@@ -144,16 +144,16 @@ $row = mysqli_fetch_assoc($result)
                             <input type="radio" name="nutrition" id="nutrition-na" value="na">
                             <label for="nutrition-na">Not sure</label><br>
 
-                            <h5>6. Do you have special dietary needs?</h5>
-                            <h5>Previous Answer: <?php echo $row["DietaryNeeds"]?><br>
+                            <h4>6. Do you have special dietary needs?</h4>
+                            <h5>Previous Answer: <?php echo $row["DietaryNeeds"]?></h5><br>
                             <input type="radio" name="dietary" id="yes-select" value="yes">
                             <label for="yes-select">Yes</label><br>
 
                             <input type="radio" name="dietary" id="no-select" value="no">
                             <label for="no-select">No</label><br>
 
-                            <h5>7. If yes, please indicate which special dietary needs that you have.</h5>
-                            <h5>Previous Answer: <?php echo $row["SpecialDietary"]?><br>
+                            <h4>7. If yes, please indicate which special dietary needs that you have.</h4>
+                            <h5>Previous Answer: <?php echo $row["SpecialDietary"]?></h5><br>
 
                             <input type="radio" name="special-dietary" id="diabetic-diet-select" value="diabetic-diet">
                             <label for="diabetic-diet-select">Diabetic diet</label><br>
@@ -170,8 +170,8 @@ $row = mysqli_fetch_assoc($result)
                             <input type="radio" name="special-dietary" id="other-select2" value="other">
                             <label for="other-select2">Other</label><br>
 
-                            <h5>8. How important is it for us to use sustainable foods?</h5>
-                            <h5>Previous Answer: <?php echo $row["Sustainability"]?><br>
+                            <h4>8. How important is it for us to use sustainable foods?</h4>
+                            <h5>Previous Answer: <?php echo $row["Sustainability"]?></h5><br>
 
                             <input type="radio" name="sustainability" id="very-important" value="very-important">
                             <label for="very-important">Very Important</label><br>
@@ -189,7 +189,7 @@ $row = mysqli_fetch_assoc($result)
 
                         <label for="message" >Any other comments, questions or concerns?</label>
                         <h5>Pervious Answer: <?php echo $row["Message"]?></h5>
-        
+
                         <TEXTAREA name="message" id="message"></TEXTAREA>
                         <br>
                         <button type="button" class="btn btn-primary"><input type="submit" value="Submit"></button>
@@ -215,7 +215,7 @@ $row = mysqli_fetch_assoc($result)
 </html>
 
 <?php
-mysqli_free_result($result);
+    mysqli_free_result($result);
 //close database connection
 mysqli_close($mysqli);
 ?>
