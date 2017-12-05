@@ -31,7 +31,7 @@ $result = mysqli_query($mysqli,$sql);
 
         <!-- Start Navigation -->
         <nav class="main-menu">
-            <span class="logo"><a href="#">Team Juneau: Assignment 9</a></span>
+            <span class="logo"><a href="index.php">Team Juneau: Assignment 9</a></span>
             <ul>
                 <li><a class="menu-link" href="index.php">Back to Survey</a></li>
                 <li><a class="menu-link" href="logout.php">Logout</a></li>

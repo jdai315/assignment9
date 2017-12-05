@@ -1,6 +1,7 @@
 <?php
 
 //Database connection
+error_reporting(0);
 require_once 'config.php';
 
 //grab data being passed from the method "post" to the HTML form
