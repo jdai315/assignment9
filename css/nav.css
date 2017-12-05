@@ -22,7 +22,7 @@ table thead {
 	position: fixed; /* required - magic */
 	top: 0; /* menu stays fixed at the top */
 	text-align:right;
-	
+	background-color:#034688;
 	    width: 100%; /* required - makes the menu go all the way across the 
     viewport */
     z-index: 1000;
@@ -101,8 +101,4 @@ div{padding-right:40px;}
 .button a:hover{color:black;
 	background-color:#FFFF00;
 }
-.container {
-    max-width: 1200px;
-    padding: 0;
-    margin-top: 80px;
-}
+
