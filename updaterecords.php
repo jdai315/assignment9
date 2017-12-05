@@ -175,8 +175,6 @@ $row = mysqli_fetch_assoc($result)
 
                     </form>  
 
-                    <?php } ?>
-
                     <a href="admin.php">Go Back to Admin Page</a>
                 </div>
             </div>

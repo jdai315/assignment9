@@ -87,7 +87,7 @@ $result = mysqli_query($mysqli,$sql);
                         <h3>Enter an ID to search for a record below:</h3>
                         <form method="post" action="records.php">
                             <table>
-                                <tr><td>ID:</td><td><input type="text" id="recordsid" name="id"></td></tr>
+                                <tr><td>ID:</td><td><input type="text" id="id" name="id"></td></tr>
                                 <tr><td><input type="submit" id="submit" name="submit" value="View Records!"></td></tr>
                             </table>
                         </form>
@@ -99,7 +99,7 @@ $result = mysqli_query($mysqli,$sql);
                         <h3>Enter an ID to delete a record below:</h3>
                         <form method="post" action="delete.php">
                             <table>
-                                <tr><td>ID:</td><td><input type="text" id="deleteid" name="id"></td></tr>
+                                <tr><td>ID:</td><td><input type="text" id="id" name="id"></td></tr>
                                 <tr><td><input type="submit" id="submit1" name="submit" value="Delete Records!"></td></tr>
                             </table>
                         </form>
@@ -111,7 +111,7 @@ $result = mysqli_query($mysqli,$sql);
                         <h3>Enter an ID to update a record below:</h3>
                         <form method="post" action="updaterecords.php">
                             <table>
-                                <tr><td>ID:</td><td><input type="text" id="updateid" name="id"></td></tr>
+                                <tr><td>ID:</td><td><input type="text" id="id" name="id"></td></tr>
                                 <tr><td><input type="submit" id="submit2" name="submit" value="Update Records!"></td></tr>
                             </table>
                         </form>
