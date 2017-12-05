@@ -74,16 +74,12 @@ div{padding-right:40px;}
 
 
 .button{text-align:right;
-	
-	width: 100%; /* required - makes the menu go all the way across the 
+width: 100%; /* required - makes the menu go all the way across the 
     viewport */
     display: block;
     padding:0;
-    margin: 0 auto;
-    position: fixed; /* required - magic */
-    z-index: 1000;
-    bottom: 0; /* menu stays fixed at the bottom */
-    }
+  }
+    
     
 .button a{
 	color: white;
