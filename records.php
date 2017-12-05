@@ -1,4 +1,15 @@
 <?php
+// Initialize the session
+session_start();
+ 
+// If session variable is not set it will redirect to login page
+if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
+  header("location: login.php");
+  exit;
+}
+?>
+
+<?php
 //Create database connection
 $mysqli = new mysqli('66.147.242.186', 'urcscon3_juneau', 'coffee1N', 'urcscon3_juneau');
 $id = $_POST ['id'];
@@ -7,6 +18,17 @@ $sql .= "WHERE ID = {$id} ";
 $sql .= "LIMIT 1";
 $result = mysqli_query($mysqli,$sql);
 $row = mysqli_fetch_assoc($result)
+?>
+
+<?php
+// Initialize the session
+session_start();
+ 
+// If session variable is not set it will redirect to login page
+if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
+  header("location: login.php");
+  exit;
+}
 ?>
 
 <!doctype html>

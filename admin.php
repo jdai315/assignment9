@@ -1,11 +1,4 @@
 <?php
-// Create a database connection
-$mysqli = new mysqli('66.147.242.186', 'urcscon3_juneau', 'coffee1N', 'urcscon3_juneau');
-$sql = "SELECT * FROM `survey_assignment_9`";
-$result = mysqli_query($mysqli,$sql);
-?>
-
-<?php
 // Initialize the session
 session_start();
  
@@ -14,6 +7,13 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
   header("location: login.php");
   exit;
 }
+?>
+
+<?php
+// Create a database connection
+$mysqli = new mysqli('66.147.242.186', 'urcscon3_juneau', 'coffee1N', 'urcscon3_juneau');
+$sql = "SELECT * FROM `survey_assignment_9`";
+$result = mysqli_query($mysqli,$sql);
 ?>
  
 <!doctype html>
