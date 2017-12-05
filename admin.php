@@ -50,6 +50,7 @@ $result = mysqli_query($mysqli,$sql);
                             <th>Has Dietary Needs</th>
                             <th>Dietary Needs</th>
                             <th>Sustainability</th>
+                            <th>Comments</th>
                         </tr>
 
                         <?php

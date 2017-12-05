@@ -14,55 +14,55 @@ $result = mysqli_query($mysqli, $query);
 
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSC 174 | Team Juneau</title>
-    <link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-  </head>
-		<body>
-		<!-- Start Top Bar -->
-  			<div class="top-bar part">
-    			<div class= "top-bar-left">
-      				<ul class="menu">
-        				<li class="menu-text">Team Juneau</li>
-      				</ul>
-    			</div>
-  			</div>
-  		<!-- End Top Bar -->
-  		<br><br><br><br>
-		<?php
-			if ($result) {
-		?>
-    		<div>
-    			<h1 class= "text-center">The record of number <?php echo $_POST['id'] ?> has been deleted!</h1>	
-    		</div>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CSC 174 | Team Juneau</title>
 
-		<?php
-			} else {
-    			die("Database query failed.");
-			}
-		?>
+    </head>
 
-		<br>
-		<div class= "text-center"><a href="admin.php" class="button large">Back</a></div>
-		<br><br><br><br>
-		<hr>
-		<footer>
-      		<div class="foot">
-        		<p>Copyright &copy; 2017 - This webpage is created by Team Juneau
-       			 <br>
-        		Here is a reference we used for assignment 8:
-              	<a href="http://www.rochester.edu/dining/learn-more/about-us/">U of R Dining Services</a>
-        		</p>    
-      		</div> 
-    	</footer>
+    <body>   
 
-		</body>
+        <!-- Start Navigation -->
+        <nav class="main-menu">
+            <span class="logo"><a href="#">Team Juneau: Assignment #9</a></span>
+            <ul>
+                <li><a class="menu-link" href="admin.php">Back to Admin</a></li>
+            </ul>
+        </nav>
+        <!-- End Navigation -->
+
+        <section id="heading">
+            <h1>University of Rochester Dining Services - Delete Confirmation</h1>
+        </section>
+
+        <section class="confirmation-message">
+            <?php
+            if ($result) {
+            ?>
+            <h2>The record of number <?php echo $_POST['id'] ?> has been deleted!</h2>	
+
+            <?php
+            } else {
+                die("ERROR: Database query failed.");
+            }
+            ?>
+            <a href="admin.php">Go Back to Admin Page</a>
+        </section>
+
+        <footer id="credits">
+            <h2>Credits</h2>
+            <ul id="footer-ul">
+                <li>Copyright &copy; 2017 - This webpage was created by Team Juneau</li>
+                <li>Here is a reference we used for assignment 9: <a href="http://www.rochester.edu/dining/learn-more/about-us/">U of R Dining Services</a></li>
+                <li>Daniella Bloom, Michelle Bushoy, Jerry Dai, Philip Kallinos</li>
+                <li><a href="login.php">Admin Login/Signup</a></li>
+            </ul>    
+        </footer>
+
+    </body>
 </html>
 
-
 <?php
-	mysqli_close($mysqli);
+mysqli_close($mysqli);
 ?>
