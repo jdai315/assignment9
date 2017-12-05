@@ -98,37 +98,34 @@ $result = mysqli_query($mysqli,$sql);
             <div class="row align-items-center">
 
                 <div class="column col-md-4 col-sm-6 col-xs-12">
-                    <div>
-                        <h3>Enter an ID to search for a record below:</h3>
+                    <div class="option">
+                        <h3>View Entry</h3>
+                        <h4>Enter an ID to search for a record below:</h4>
                         <form method="post" action="records.php">
-                            <table>
-                                <tr><td>ID:</td><td><input type="text" id="id" name="id"></td></tr>
-                                <tr><td><input type="submit" id="submit" name="submit" value="View Records!"></td></tr>
-                            </table>
+                            <input type="text" id="id" name="id">
+                            <input type="submit" id="submit" name="submit" value="View Records!">
                         </form>
                     </div>
                 </div>
 
                 <div class="column col-md-4 col-sm-6 col-xs-12">
-                    <div>
-                        <h3>Enter an ID to delete a record below:</h3>
+                    <div class="option">
+                        <h3>Delete Entry</h3>
+                        <h4>Enter an ID to delete a record below:</h4>
                         <form method="post" action="delete.php">
-                            <table>
-                                <tr><td>ID:</td><td><input type="text" id="id" name="id"></td></tr>
-                                <tr><td><input type="submit" id="submit1" name="submit" value="Delete Records!"></td></tr>
-                            </table>
+                            <input type="text" id="id" name="id">
+                            <input type="submit" id="submit1" name="submit" value="Delete Records!">
                         </form>
                     </div>
                 </div>
 
                 <div class="column col-md-4 col-sm-12 col-xs-12">
-                    <div>
-                        <h3>Enter an ID to update a record below:</h3>
+                    <div class="option">
+                        <h3>Update Entry</h3>
+                        <h4>Enter an ID to update a record below:</h4>
                         <form method="post" action="updaterecords.php">
-                            <table>
-                                <tr><td>ID:</td><td><input type="text" id="id" name="id"></td></tr>
-                                <tr><td><input type="submit" id="submit2" name="submit" value="Update Records!"></td></tr>
-                            </table>
+                            <input type="text" id="id" name="id">
+                            <input type="submit" id="submit2" name="submit" value="Update Records!">
                         </form>
                     </div>
                 </div>
