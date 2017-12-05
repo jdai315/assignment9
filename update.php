@@ -56,21 +56,23 @@ $telephone=mysqli_real_escape_string($mysqli, $telephone);
 $message=mysqli_real_escape_string($mysqli, $message);
 
 //perform database query
-$query  = "UPDATE 'survey_assignment_9' SET ";
-$query .= "Name = '$updatedName',";
-$query .="Email = '$updatedEmail',";
-$query .="Telephone = '$updatedTelephone', ";
-$query .="CampusStatus = '$statusselect', ";
-$query .="FoodLocation = '$location1, $location2, $location3, $location4, $location5', ";
-$query .="QualityRate = '$qualityselect', ";
-$query .="Suggestion = '$suggestionselect', ";
-$query .="Healthy = '$healthyselect', ";
-$query .="DietaryNeeds = '$dietaryselect', ";
-$query .="SpecialDietary = '$specialdietaryselect', ";
-$query .="Sustainability = '$sustainabilityselect', ";
-$query .="Message = '$message'";
-$query .= "WHERE ID = {$number}";
+$query  ="UPDATE survey_assignment_9 SET ";
+$query .=" Name = '$updatedName',";
+$query .=" Email = '$updatedEmail',";
+$query .=" Telephone = '$updatedTelephone', ";
+$query .=" CampusStatus = '$statusselect', ";
+$query .=" FoodLocation = '$location1, $location2, $location3, $location4, $location5', ";
+$query .=" QualityRate = '$qualityselect', ";
+$query .=" Suggestion = '$suggestionselect', ";
+$query .=" Healthy = '$healthyselect', ";
+$query .=" DietaryNeeds = '$dietaryselect', ";
+$query .=" SpecialDietary = '$specialdietaryselect', ";
+$query .=" Sustainability = '$sustainabilityselect', ";
+$query .=" Message = '$message'";
+$query .="WHERE ID = {$number}";
+
 $result = mysqli_query($mysqli, $query);
+
 
 ?>
 
