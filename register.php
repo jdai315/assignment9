@@ -108,11 +108,11 @@ include "inc/top.inc";
         </nav>
         <!-- End Navigation -->
 
-        <section id="heading">
+        <section class="heading" id="heading">
             <h1>University of Rochester Dining Services - Admin Signup</h1>
         </section>
 
-        <section id="login-section">
+        <section class="login" id="login-section">
             <div class="row align-items-center">
                 <div class="column col-md-12 col-sm-12 col-xs-12">
                     <h2>Sign Up</h2>
