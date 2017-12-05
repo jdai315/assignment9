@@ -2,7 +2,7 @@
 //Create database connection
 $mysqli = new mysqli('66.147.242.186', 'urcscon3_juneau', 'coffee1N', 'urcscon3_juneau');
 $id = $_POST ['id'];
-$sql = "SELECT * FROM `survey`";
+$sql = "SELECT * FROM `survey_assignment_9`";
 $sql .= "WHERE ID = {$id} ";
 $sql .= "LIMIT 1";
 $result = mysqli_query($mysqli,$sql);
@@ -39,19 +39,19 @@ $row = mysqli_fetch_assoc($result)
 
             <table border="1">
 
-                <tr><td>ID:</td><td><?php echo $row["ID"]; ?></td></tr>
-                <tr><td>Name:</td><td><?php echo $row["Name"]; ?></td></tr>
-                <tr><td>Email:</td><td><?php echo $row["Email"]; ?></td></tr>
-                <tr><td>Telephone:</td><td><?php echo $row["Telephone"]; ?></td></tr>
-                <tr><td>Campus Status:</td><td><?php echo $row["CampusStatus"]; ?></td></tr>
-                <tr><td>Food Location:</td><td><?php echo $row["FoodLocation"]; ?></td></tr>
-                <tr><td>Quality Rate:</td><td><?php echo $row["QualityRate"]; ?></td></tr>
-                <tr><td>Food Purchase:</td><td><?php echo $row["FoodPurchase"]; ?></td></tr>
-                <tr><td>Where To Get Food:</td><td><?php echo $row["WhereToGetFood"]; ?></td></tr>
-                <tr><td>Dietary Needs:</td><td><?php echo $row["DietaryNeeds"]; ?></td></tr>
-                <tr><td>Special Dietary:</td><td><?php echo $row["SpecialDietary"]; ?></td></tr>
-                <tr><td>Cafeteria:</td><td><?php echo $row["Cafeteria"]; ?></td></tr>
-                <tr><td>Message:</td><td><?php echo $row["Message"]; ?></td></tr> 
+            <tr><td>ID:</td><td><?php echo $row["ID"]; ?></td></tr>
+            <tr><td>Name:</td><td><?php echo $row["Name"]; ?></td></tr>
+            <tr><td>Email:</td><td><?php echo $row["Email"]; ?></td></tr>
+            <tr><td>Telephone:</td><td><?php echo $row["Telephone"]; ?></td></tr>
+            <tr><td>Campus Status:</td><td><?php echo $row["CampusStatus"]; ?></td></tr>
+            <tr><td>Locations Visited:</td><td><?php echo $row["FoodLocation"]; ?></td></tr>
+            <tr><td>Quality Rating:</td><td><?php echo $row["QualityRate"]; ?></td></tr>
+            <tr><td>Open to Suggestions:</td><td><?php echo $row["Suggestion"]; ?></td></tr>
+            <tr><td>Healthy Options:</td><td><?php echo $row["Healthy"]; ?></td></tr>
+            <tr><td>Has Dietary Needs:</td><td><?php echo $row["DietaryNeeds"]; ?></td></tr>
+            <tr><td>Dietary Needs:</td><td><?php echo $row["SpecialDietary"]; ?></td></tr>
+            <tr><td>Sustainability:</td><td><?php echo $row["Sustainability"]; ?></td></tr>
+            <tr><td>Message:</td><td><?php echo $row["Message"]; ?></td></tr>  
 
                 <?php } ?>
             </table>
@@ -74,6 +74,6 @@ $row = mysqli_fetch_assoc($result)
 
 <?php
 mysqli_free_result($result);
-
+// close database connection
 mysqli_close($mysqli);
 ?>
