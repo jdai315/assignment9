@@ -1,4 +1,4 @@
- <footer id="credits">
+ <footer class="credits" id="credits">
             <h2>Credits</h2>
             <ul id="footer-ul">
                 <li>Copyright &copy; 2017 - This webpage was created by Team Juneau</li>
