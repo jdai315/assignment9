@@ -1,11 +1,4 @@
 <?php
-// Create a database connection
-require_once 'config.php';
-$sql = "SELECT * FROM `survey_assignment_9`";
-$result = mysqli_query($mysqli,$sql);
-?>
-
-<?php
     $name = $_GET['name'];
 ?>
 
