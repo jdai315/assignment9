@@ -11,6 +11,7 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
 
 <?php
 // Create a database connection
+error_reporting(0);
 require_once 'config.php';
 $id = $_POST ['id'];
 $sql = "SELECT * FROM `survey_assignment_9`";
