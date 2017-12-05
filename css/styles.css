@@ -8,7 +8,12 @@ h1,h2,h3{color:#02386d;}
 	background-color:#FFFF00;
     margin: 0;
     padding-left: 30px;
-    font-family:lato;
+    font-family:'lato', sans-serif;
+}
+label {
+	font-family: 'Lato', sans-serif;
+	letter-spacing: 1px;
+    line-height: 1.75em;
 }
 
 .surv h2{text-align:center;
