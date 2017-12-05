@@ -18,15 +18,14 @@ $location3=$_POST["location3"];
 $location4=$_POST["location4"];
 $location5=$_POST["location5"];
 
-
 //question3
 $qualityselect=$_POST["quality"];
 
 //question4
-$purchaseselect=$_POST["suggestion"];
+$suggestionselect=$_POST["suggestion"];
 
 //question5
-$eatselect=$_POST["nutrition"];
+$healthyselect=$_POST["healthy"];
 
 //question6
 $dietaryselect=$_POST["dietary"];
@@ -35,7 +34,7 @@ $dietaryselect=$_POST["dietary"];
 $specialdietaryselect=$_POST["special-dietary"];
 
 //question8
-$cafeteriaselect=$_POST["sustainability"];
+$sustainabilityselect=$_POST["sustainability"];
 
 //message
 $message=trim(stripslashes($_POST["message"]));

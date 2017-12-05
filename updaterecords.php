@@ -53,19 +53,19 @@ $row = mysqli_fetch_assoc($result)
 
                             <h5>1. What is your campus status?</h5>
 
-                            <input type="radio" name="status" id="on-campus-select" value="on-campus">
+                            <input type="radio" name="status" id="on-campus-select" value = "<?php echo $row["CampusStatus"]?>">
                             <label for="on-campus-select">Student living on campus</label><br>
 
-                            <input type="radio" name="status" id="off-campus-select" value="off-campus">
+                            <input type="radio" name="status" id="off-campus-select"value = "<?php echo $row["CampusStatus"]?>">
                             <label for="off-campus-select">Student living off campus</label><br>
 
-                            <input type="radio" name="status" id="faculty-select" value="faculty">
+                            <input type="radio" name="status" id="faculty-select" value = "<?php echo $row["CampusStatus"]?>">
                             <label for="faculty-select">Faculty</label><br>
 
-                            <input type="radio" name="status" id="staff-select" value="staff">
+                            <input type="radio" name="status" id="staff-select" value = "<?php echo $row["CampusStatus"]?>">
                             <label for="staff-select">Staff</label><br>
 
-                            <input type="radio" name="status" id="other-select1" value="other">
+                            <input type="radio" name="status" id="other-select1" value = "<?php echo $row["CampusStatus"]?>">
                             <label for="other-select1">Other</label><br>
 
                             <h5>2. Which dining locations do you visit?</h5>
