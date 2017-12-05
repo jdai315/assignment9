@@ -43,7 +43,7 @@ $row = mysqli_fetch_assoc($result)
             <tr><td>Name:</td><td><?php echo $row["Name"]; ?></td></tr>
             <tr><td>Email:</td><td><?php echo $row["Email"]; ?></td></tr>
             <tr><td>Telephone:</td><td><?php echo $row["Telephone"]; ?></td></tr>
-            <tr><td>Campus Status:</td><td><?php echo $row["CampusStatus"]; ?></td></tr>
+            <tr><td>Status:</td><td><?php echo $row["CampusStatus"]; ?></td></tr>
             <tr><td>Locations Visited:</td><td><?php echo $row["FoodLocation"]; ?></td></tr>
             <tr><td>Quality Rating:</td><td><?php echo $row["QualityRate"]; ?></td></tr>
             <tr><td>Open to Suggestions:</td><td><?php echo $row["Suggestion"]; ?></td></tr>

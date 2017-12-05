@@ -1,7 +1,7 @@
 <?php
 // Create a database connection
 $mysqli = new mysqli('66.147.242.186', 'urcscon3_juneau', 'coffee1N', 'urcscon3_juneau');
-$sql = "SELECT * FROM `survey`";
+$sql = "SELECT * FROM `survey_assignment_9`";
 $result = mysqli_query($mysqli,$sql);
 ?>
 
@@ -61,6 +61,15 @@ $result = mysqli_query($mysqli,$sql);
                             <td><?php echo $row["Name"]; ?></td>
                             <td><?php echo $row["Email"]; ?></td>
                             <td><?php echo $row["Telephone"]; ?></td>
+                            <td><?php echo $row["CampusStatus"]; ?></td>
+                            <td><?php echo $row["FoodLocation"]; ?></td>
+                            <td><?php echo $row["QualityRate"]; ?></td>
+                            <td><?php echo $row["Suggestion"]; ?></td>
+                            <td><?php echo $row["Healthy"]; ?></td>
+                            <td><?php echo $row["DietaryNeeds"]; ?></td>
+                            <td><?php echo $row["SpecialDietary"]; ?></td>
+                            <td><?php echo $row["Sustainability"]; ?></td>
+                            <td><?php echo $row["Message"]; ?></td>
                         </tr>
                         <?php } ?>
                     </table>
@@ -124,3 +133,8 @@ $result = mysqli_query($mysqli,$sql);
 
     </body>
 </html>
+
+<?php
+// close database connection
+mysqli_close($mysqli);
+?>
