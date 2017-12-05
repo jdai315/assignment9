@@ -65,7 +65,7 @@ $result = mysqli_query($mysqli, $query);
 if ($result) {
     echo "Success! - the query didn't error-out";
     //send the user to the thank you webpage
-    header("Location: survey-thanks.php");
+    header("Location: survey-thanks.php?name=$name");
 } 
 else {
     die("Database query failed.");
