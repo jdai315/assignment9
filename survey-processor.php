@@ -1,12 +1,6 @@
 <?php
 
 //Database connection
-error_reporting(0);
-$dbhost = "localhost";
-$dbuser = "urcscon3_juneau";
-$dbpass = "coffee1N";
-$dbname = "urcscon3_juneau";
-
 $mysqli = new mysqli('66.147.242.186', 'urcscon3_juneau', 'coffee1N', 'urcscon3_juneau');
 
 //grab data being passed from the method "post" to the HTML form
