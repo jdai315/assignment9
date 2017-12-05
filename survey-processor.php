@@ -75,7 +75,7 @@ if ($result) {
 	}
 
 //Close database connection
-mysqli_close($connection);
+mysqli_close($mysqli);
 
 //send the user to the thank you webpage
 header("Location: survey-thanks.php");
