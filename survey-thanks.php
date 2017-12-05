@@ -1,3 +1,7 @@
+<?php
+    $name = $_GET['name'];
+?>
+
 <!doctype html>
 <html lang="en">
     <head>
@@ -25,7 +29,7 @@
         <section id="thank-you" class="confirmation-message">
             <div class="row align-items-center">
                 <div class="column col-md-12 col-sm-12 col-xs-12">
-                    <h2>Thank you!</h2>
+                    <h2>Thank you <?php echo $name;?></h2>
                     <p>Thank you for filling out the survey. Your responses will be used to improve U of R Dining Services for all!</p>
                 </div>
             </div>
