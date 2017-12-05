@@ -94,16 +94,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 }
 ?>
 
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/styles.css">
-        <title>CSC 174 | Team Juneau | Assignment 9</title>
-    </head>
-    <body>
+<?php
+$currentTitle = "CSC 174 | Team Juneau | Assignment 9";
+include "inc/top.inc";
+?>
 
         <!-- Start Navigation -->
         <nav class="main-menu">
@@ -155,15 +149,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             </div>
         </section>
 
-        <footer id="credits">
-            <h2>Credits</h2>
-            <ul id="footer-ul">
-                <li>Copyright &copy; 2017 - This webpage was created by Team Juneau</li>
-                <li>Here is a reference we used for assignment 9: <a href="http://www.rochester.edu/dining/learn-more/about-us/">U of R Dining Services</a></li>
-                <li>Daniella Bloom, Michelle Bushoy, Jerry Dai, Philip Kallinos</li>
-                <li><a href="login.php">Admin Login/Signup</a></li>
-            </ul>    
-        </footer>
-
+<?php
+include "inc/footer.inc";
+?>
     </body>
 </html>
