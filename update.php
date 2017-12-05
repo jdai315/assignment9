@@ -23,10 +23,10 @@ $location5=$_POST["location5"];
 $qualityselect=$_POST["quality"];
 
 //question4
-$purchaseselect=$_POST["purchase"];
+$purchaseselect=$_POST["suggestion"];
 
 //question5
-$eatselect=$_POST["eat"];
+$eatselect=$_POST["nutrition"];
 
 //question6
 $dietaryselect=$_POST["dietary"];
@@ -35,24 +35,30 @@ $dietaryselect=$_POST["dietary"];
 $specialdietaryselect=$_POST["special-dietary"];
 
 //question8
-$cafeteriaselect=$_POST["cafeteria"];
+$cafeteriaselect=$_POST["sustainability"];
 
+//message
 $message=trim(stripslashes($_POST["message"]));
 
+//escape all strings
+$name=mysqli_real_escape_string($mysqli, $name);
+$email=mysqli_real_escape_string($mysqli, $email);
+$telephone=mysqli_real_escape_string($mysqli, $telephone);
+$message=mysqli_real_escape_string($mysqli, $message);
 
-
-$query  = "UPDATE survey SET ";
+//perform database query
+$query  = "UPDATE 'survey_assignment_9' SET ";
 $query .= "Name = '$updatedName',";
 $query .="Email = '$updatedEmail',";
 $query .="Telephone = '$updatedTelephone', ";
 $query .="CampusStatus = '$statusselect', ";
 $query .="FoodLocation = '$location1, $location2, $location3, $location4, $location5', ";
 $query .="QualityRate = '$qualityselect', ";
-$query .="FoodPurchase = '$purchaseselect', ";
-$query .="WhereToGetFood = '$eatselect', ";
+$query .="Suggestion = '$suggestionselect', ";
+$query .="Healthy = '$healthyselect', ";
 $query .="DietaryNeeds = '$dietaryselect', ";
 $query .="SpecialDietary = '$specialdietaryselect', ";
-$query .="Cafeteria = '$cafeteriaselect', ";
+$query .="Sustainability = '$sustainabilityselect', ";
 $query .="Message = '$message'";
 $query .= "WHERE ID = {$number}";
 $result = mysqli_query($mysqli, $query);
@@ -111,5 +117,6 @@ $result = mysqli_query($mysqli, $query);
 </html>
 
 <?php
+//close databse connection
 mysqli_close($mysqli);
 ?>

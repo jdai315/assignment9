@@ -26,7 +26,7 @@ $qualityselect=$_POST["quality"];
 $suggestionselect=$_POST["suggestion"];
 
 //question5
-$nutritionselect=$_POST["nutrition"];
+$healthyselect=$_POST["healthy"];
 
 //question6
 $dietaryselect=$_POST["dietary"];
@@ -49,13 +49,13 @@ $message=mysqli_real_escape_string($mysqli, $message);
 //perform database query
 $query  = "INSERT INTO `survey_assignment_9`(";
 	$query .= "  `Name`, `Email`, `Telephone`, `CampusStatus`, ";
-	$query .= "  `FoodLocation`, `QualityRate`, `FoodPurchase`, ";
-	$query .= "  `WhereToGetFood`, `DietaryNeeds`, `SpecialDietary`, ";
-	$query .= "  `Cafeteria`, `Message`";
+	$query .= "  `FoodLocation`, `QualityRate`, `Suggestion`, ";
+	$query .= "  `Healthy`, `DietaryNeeds`, `SpecialDietary`, ";
+	$query .= "  `Sustainability`, `Message`";
 	$query .= ") VALUES (";
 	$query .= "  '{$name}', '{$email}', '{$telephone}', '{$statusselect}', ";
 	$query .= "  '{$location1}, {$location2}, {$location3}, {$location4}, {$location5}', '{$qualityselect}', '{$suggestionselect}',  ";
-	$query .= "  '{$nutritionselect}', '{$dietaryselect}', '{$specialdietaryselect}', ";
+	$query .= "  '{$healthyselect}', '{$dietaryselect}', '{$specialdietaryselect}', ";
 	$query .= "  '{$sustainabilityselect}', '{$message}'";
 	$query .= ")";
 

@@ -2,7 +2,7 @@
 // Create a database connection
 $mysqli = new mysqli('66.147.242.186', 'urcscon3_juneau', 'coffee1N', 'urcscon3_juneau');
 $id = $_POST ['id'];
-$sql = "SELECT * FROM `survey`";
+$sql = "SELECT * FROM `survey_assignment_9`";
 $sql .= "WHERE ID = {$id} ";
 $sql .= "LIMIT 1";
 $result = mysqli_query($mysqli,$sql);
@@ -197,6 +197,6 @@ $row = mysqli_fetch_assoc($result)
 
 <?php
 mysqli_free_result($result);
-
+//close database connection
 mysqli_close($mysqli);
 ?>
