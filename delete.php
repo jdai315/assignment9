@@ -11,7 +11,7 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
 
 <?php
 // Create a database connection
-$mysqli = new mysqli('66.147.242.186', 'urcscon3_juneau', 'coffee1N', 'urcscon3_juneau');
+require_once 'config.php';
 
 $id = $_POST ['id'];
 
