@@ -29,9 +29,10 @@ include "inc/top.inc";
                     <h2>About</h2>
                     <span class="tagline">We have a deep respect for and commitment to protecting and improving the environment while making a positive impact in the lives of our local and global community. Please let us know how we are doing!</span>
                 </div>
-                <div class="button"
+                <div class="button">
                 <div class="column col-md-6 col-sm-6 col-xs-12">
                     <button type="button" class="btn btn-info"><a href="#survey">Complete Survey</a></button>
+                 </div>
                 </div>
             </div> 
         </section>
