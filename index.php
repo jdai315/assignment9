@@ -7,7 +7,7 @@ include "inc/top.inc";
         <nav class="main-menu">
             <span class="logo"><a href="index.php">Team Juneau: Assignment 9</a></span>
             <ul>
-                <li><span>Go to: </span></li>
+              
                 <li><a class="menu-link" href="#about">About</a></li>
                 <li><a class="menu-link" href="#survey">Survey</a></li>
                 <li><a class="menu-link" href="#credits">Credits</a></li>
