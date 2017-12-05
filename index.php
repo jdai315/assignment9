@@ -14,7 +14,7 @@ include "inc/top.inc";
             </ul>
         </nav>
         <!-- End Navigation -->
-
+<div class="container">
         <section id="main-image">
             <img class="dining" src="images/dininghall.jpg">
             <div class="image-overlay">
@@ -236,6 +236,7 @@ include "inc/top.inc";
                         <button type="submit" class="btn btn-primary">Submit</button>
                             </div>
                     </form>
+                </div>
                 </div>
             </div>
 
