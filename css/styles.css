@@ -1,103 +1,35 @@
 
-#infotable{
-overflow-y:scroll; 
-overflow-x:scroll; 
-height:400px; 
-width:500px;
-display:block; 
-}
 
-table thead {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    z-index: 5;
-    background-color:black;
-    color:white;
-}
+Body{background-color:#cacaca;}
 
+h1,h2,h3{color:#02386d;}
 
-.main-menu .logo{text-align:left;}
-.main-menu{
-	position: fixed; /* required - magic */
-	top: 0; /* menu stays fixed at the top */
-	text-align:right;
-	
-	    width: 100%; /* required - makes the menu go all the way across the 
-    viewport */
-    z-index: 1000;
-
-	
-}
-
-   .logo {
+.surv{
+	background-color:#FFFF00;
     margin: 0;
-    padding: 0;
-    float: left;
-    height: 30px;
-    text-transform: uppercase;
-    font-size: 18px;
+    padding-left: 30px;
+    font-family:lato;
 }
 
-.main-menu li{
-	display: inline-block;
-	border:1px solid white;
+.surv h2{text-align:center;
+	padding-top:20px;
+	padding-bottom:20px;}
+
+
+h1, h3, h4 {
+	font-family: 'Nunito', sans-serif;
+	letter-spacing:2px;
+	padding-bottom: 15px;
+	margin-top: 10px;
 }
 
-.main-menu a{
-	color: white;
-	display: block;
-	padding: 10px 30px 10px 30px;
-	text-decoration:none;
-	background-color:#034688;
-}
-
-.main-menu a:hover{
-	color:black;
-	background-color:#FFFF00;
-}
-
-.main-menu li a.current{
-	color:white;
-	background-color:#FFFF00;
-}
-.dining{padding-left:250px}
-
-
-.f-image{padding-left:30px;}
-
-div{padding-right:40px;}
-
-.image-overlay{padding-left:30px;}
-
-.tag{padding-left:30px;}
-
-
-.button{text-align:right;
+.credits{padding-top:30px;
+	padding-bottom:30px;
+	padding-left:30px;}
 	
-	width: 100%; /* required - makes the menu go all the way across the 
-    viewport */
-    display: block;
-    padding:0;
-    margin: 0 auto;
-    position: fixed; /* required - magic */
-    z-index: 1000;
-    bottom: 0; /* menu stays fixed at the bottom */
-    }
-    
-.button a{
-	color: white;
-	display: block;
-	padding: 10px 30px 10px 30px;
-	text-decoration:none;
-	background-color:#034688;
-	display: inline-block;
-	border:1px solid white;
+.submit{padding-bottom:15px;}
+
+.heading{padding-top:50px;
+	text-align:center;}
 	
-}
-
-
-
-.button a:hover{color:black;
-	background-color:#FFFF00;
-}
+.login{padding-left:30px;}
