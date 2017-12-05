@@ -109,7 +109,7 @@ include "inc/top.inc";
                         <h4>Enter an ID to delete a record below:</h4>
                         <form method="post" action="delete.php">
                             <input type="text" id="id" name="id">
-                            <input type="submit" id="submit1" name="submit" value="Delete Records!">
+                            <input type="submit" id="submit1" name="submit" value="Delete Records!" onclick="return confirm('Are you sure you want to delete?')">
                         </form>
                     </div>
                 </div>
