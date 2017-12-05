@@ -1,11 +1,11 @@
 <?php
 // Initialize the session
 session_start();
- 
+
 // If session variable is not set it will redirect to login page
 if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
-  header("location: login.php");
-  exit;
+    header("location: login.php");
+    exit;
 }
 ?>
 
@@ -15,7 +15,7 @@ require_once 'config.php';
 $sql = "SELECT * FROM `survey_assignment_9`";
 $result = mysqli_query($mysqli,$sql);
 ?>
- 
+
 <!doctype html>
 <html lang="en">
     <head>
@@ -47,22 +47,24 @@ $result = mysqli_query($mysqli,$sql);
                 <div class="column col-md-12 col-sm-12 col-xs-12">
 
                     <h2>Survey Records</h2>
-                    <table border="1">
-                        <tr>
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Telephone</th>
-                            <th>Status</th>
-                            <th>Locations Visited</th>
-                            <th>Quality Rating</th>
-                            <th>Open to Suggestions</th>
-                            <th>Healthy Options</th>
-                            <th>Has Dietary Needs</th>
-                            <th>Dietary Needs</th>
-                            <th>Sustainability</th>
-                            <th>Comments</th>
-                        </tr>
+                    <table border="1" id="infotable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Telephone</th>
+                                <th>Status</th>
+                                <th>Locations Visited</th>
+                                <th>Quality Rating</th>
+                                <th>Open to Suggestions</th>
+                                <th>Healthy Options</th>
+                                <th>Has Dietary Needs</th>
+                                <th>Dietary Needs</th>
+                                <th>Sustainability</th>
+                                <th>Comments</th>
+                            </tr>
+                        </thead>
 
                         <?php
                         while($row = mysqli_fetch_assoc($result)){
@@ -104,7 +106,7 @@ $result = mysqli_query($mysqli,$sql);
                         </form>
                     </div>
                 </div>
-                
+
                 <div class="column col-md-4 col-sm-6 col-xs-12">
                     <div>
                         <h3>Enter an ID to delete a record below:</h3>
@@ -116,7 +118,7 @@ $result = mysqli_query($mysqli,$sql);
                         </form>
                     </div>
                 </div>
-                
+
                 <div class="column col-md-4 col-sm-12 col-xs-12">
                     <div>
                         <h3>Enter an ID to update a record below:</h3>

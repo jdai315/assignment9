@@ -16,7 +16,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         // Prepare a select statement
         $sql = "SELECT id FROM users WHERE username = ?";
         
-        if($stmt = mysqli_prepare($link, $sql)){
+        if($stmt = mysqli_prepare($mysqli, $sql)){
             // Bind variables to the prepared statement as parameters
             mysqli_stmt_bind_param($stmt, "s", $param_username);
             
@@ -67,7 +67,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         // Prepare an insert statement
         $sql = "INSERT INTO users (username, password) VALUES (?, ?)";
          
-        if($stmt = mysqli_prepare($link, $sql)){
+        if($stmt = mysqli_prepare($mysqli, $sql)){
             // Bind variables to the prepared statement as parameters
             mysqli_stmt_bind_param($stmt, "ss", $param_username, $param_password);
             
@@ -78,7 +78,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
                 // Redirect to login page
-                header("location: admin.php");
+                header("location: login.php");
             } else{
                 echo "Something went wrong. Please try again later.";
             }
@@ -89,6 +89,81 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     
     // Close connection
-    mysqli_close($link);
+    mysqli_close($mysqli);
 }
 ?>
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CSC 174 | Team Juneau</title>
+
+    </head>
+
+    <body>   
+
+        <!-- Start Navigation -->
+        <nav class="main-menu">
+            <span class="logo"><a href="#">Team Juneau: Assignment #9</a></span>
+            <ul>
+                <li><a class="menu-link" href="index.php">Back to Survey</a></li>
+            </ul>
+        </nav>
+        <!-- End Navigation -->
+
+        <section id="heading">
+            <h1>University of Rochester Dining Services - Login</h1>
+        </section>
+
+        <section id="login-signup">
+            <div class="row align-items-center">
+
+                <div class="column col-md-12 col-sm-12 col-xs-12">
+                    <h2>Sign Up</h2>
+                    <h3>Please fill this form out to create an account.</h3>
+                    <form action="register.php" method="post">
+
+                        <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
+                            <label>Username:<sup>*</sup></label>
+                            <input type="text" name="username"class="form-control" value="<?php echo $username; ?>">
+                            <span class="help-block"><?php echo $username_err; ?></span>
+                        </div>
+
+                        <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
+                            <label>Password:<sup>*</sup></label>
+                            <input type="password" name="password" class="form-control" value="<?php echo $password; ?>">
+                            <span class="help-block"><?php echo $password_err; ?></span>
+                        </div>
+
+                        <div class="form-group <?php echo (!empty($confirm_password_err)) ? 'has-error' : ''; ?>">
+                            <label>Confirm Password:<sup>*</sup></label>
+                            <input type="password" name="confirm_password" class="form-control" value="<?php echo $confirm_password; ?>">
+                            <span class="help-block"><?php echo $confirm_password_err; ?></span>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-primary" value="Submit">
+                            <input type="reset" class="btn btn-default" value="Reset">
+                        </div>
+
+                    </form>
+                    <h4>Go back to login page: <a href="login.php">Login Page</a></h4>
+                </div>  
+                
+            </div>
+        </section>
+
+        <footer id="credits">
+            <h2>Credits</h2>
+            <ul id="footer-ul">
+                <li>Copyright &copy; 2017 - This webpage was created by Team Juneau</li>
+                <li>Here is a reference we used for assignment 9: <a href="http://www.rochester.edu/dining/learn-more/about-us/">U of R Dining Services</a></li>
+                <li>Daniella Bloom, Michelle Bushoy, Jerry Dai, Philip Kallinos</li>
+                <li><a href="login.php">Admin Login/Signup</a></li>
+            </ul>    
+        </footer>
+
+    </body>
+</html>
