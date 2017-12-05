@@ -1,7 +1,7 @@
 <?php
 
 //Database connection
-$mysqli = new mysqli('66.147.242.186', 'urcscon3_juneau', 'coffee1N', 'urcscon3_juneau');
+require_once 'config.php';
 
 //grab data being passed from the method "post" to the HTML form
 //and hold each in variables
