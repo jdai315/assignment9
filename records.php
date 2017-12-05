@@ -1,11 +1,11 @@
 <?php
 // Initialize the session
 session_start();
- 
+
 // If session variable is not set it will redirect to login page
 if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
-  header("location: login.php");
-  exit;
+    header("location: login.php");
+    exit;
 }
 ?>
 
@@ -21,13 +21,13 @@ $row = mysqli_fetch_assoc($result)
 ?>
 
 <?php
-// Initialize the session
-session_start();
- 
+    // Initialize the session
+    session_start();
+
 // If session variable is not set it will redirect to login page
 if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
-  header("location: login.php");
-  exit;
+    header("location: login.php");
+    exit;
 }
 ?>
 
@@ -36,7 +36,9 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>CSC 174 | Team Juneau</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/styles.css">
+        <title>CSC 174 | Team Juneau | Assignment 9</title>
 
     </head>
 
@@ -44,9 +46,9 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
 
         <!-- Start Navigation -->
         <nav class="main-menu">
-            <span class="logo"><a href="#">Team Juneau: Assignment #9</a></span>
+            <span class="logo"><a href="#">Team Juneau: Assignment 9</a></span>
             <ul>
-                <li><a class="menu-link" href="admin.php">Back to Admin</a></li>
+                <li><a class="menu-link" href="admin.php">Go Back</a></li>
             </ul>
         </nav>
         <!-- End Navigation -->
@@ -56,28 +58,32 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
         </section>
 
         <section class="confirmation-message">
+            <div class="row align-items-center">
+                <div class="column col-md-12 col-sm-12 col-xs-12">
 
-            <h2> <?php echo $row["Name"]?>'s Survey Responses</h2>
+                    <h2><?php echo $row["Name"]?>'s Survey Responses</h2>
 
-            <table border="1">
+                    <table border="1">
 
-                <tr><td>ID:</td><td><?php echo $row["ID"]; ?></td></tr>
-                <tr><td>Name:</td><td><?php echo $row["Name"]; ?></td></tr>
-                <tr><td>Email:</td><td><?php echo $row["Email"]; ?></td></tr>
-                <tr><td>Telephone:</td><td><?php echo $row["Telephone"]; ?></td></tr>
-                <tr><td>Status:</td><td><?php echo $row["CampusStatus"]; ?></td></tr>
-                <tr><td>Locations Visited:</td><td><?php echo $row["FoodLocation"]; ?></td></tr>
-                <tr><td>Quality Rating:</td><td><?php echo $row["QualityRate"]; ?></td></tr>
-                <tr><td>Open to Suggestions:</td><td><?php echo $row["Suggestion"]; ?></td></tr>
-                <tr><td>Healthy Options:</td><td><?php echo $row["Healthy"]; ?></td></tr>
-                <tr><td>Has Dietary Needs:</td><td><?php echo $row["DietaryNeeds"]; ?></td></tr>
-                <tr><td>Dietary Needs:</td><td><?php echo $row["SpecialDietary"]; ?></td></tr>
-                <tr><td>Sustainability:</td><td><?php echo $row["Sustainability"]; ?></td></tr>
-                <tr><td>Message:</td><td><?php echo $row["Message"]; ?></td></tr>  
+                        <tr><td>ID:</td><td><?php echo $row["ID"]; ?></td></tr>
+                        <tr><td>Name:</td><td><?php echo $row["Name"]; ?></td></tr>
+                        <tr><td>Email:</td><td><?php echo $row["Email"]; ?></td></tr>
+                        <tr><td>Telephone:</td><td><?php echo $row["Telephone"]; ?></td></tr>
+                        <tr><td>Status:</td><td><?php echo $row["CampusStatus"]; ?></td></tr>
+                        <tr><td>Locations Visited:</td><td><?php echo $row["FoodLocation"]; ?></td></tr>
+                        <tr><td>Quality Rating:</td><td><?php echo $row["QualityRate"]; ?></td></tr>
+                        <tr><td>Open to Suggestions:</td><td><?php echo $row["Suggestion"]; ?></td></tr>
+                        <tr><td>Healthy Options:</td><td><?php echo $row["Healthy"]; ?></td></tr>
+                        <tr><td>Has Dietary Needs:</td><td><?php echo $row["DietaryNeeds"]; ?></td></tr>
+                        <tr><td>Dietary Needs:</td><td><?php echo $row["SpecialDietary"]; ?></td></tr>
+                        <tr><td>Sustainability:</td><td><?php echo $row["Sustainability"]; ?></td></tr>
+                        <tr><td>Message:</td><td><?php echo $row["Message"]; ?></td></tr>  
 
-            </table>
+                    </table>
 
-            <a href="admin.php">Go Back to Admin Page</a>
+                    <a href="admin.php">Go Back to Admin Page</a>
+                </div>
+            </div>
         </section>
 
         <footer id="credits">

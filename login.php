@@ -1,45 +1,45 @@
 <?php
 // Include config file
 require_once 'config.php';
- 
+
 // Define variables and initialize with empty values
 $username = $password = "";
 $username_err = $password_err = "";
- 
+
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
- 
+
     // Check if username is empty
     if(empty(trim($_POST["username"]))){
         $username_err = 'Please enter username.';
     } else{
         $username = trim($_POST["username"]);
     }
-    
+
     // Check if password is empty
     if(empty(trim($_POST['password']))){
         $password_err = 'Please enter your password.';
     } else{
         $password = trim($_POST['password']);
     }
-    
+
     // Validate credentials
     if(empty($username_err) && empty($password_err)){
         // Prepare a select statement
         $sql = "SELECT username, password FROM users WHERE username = ?";
-        
+
         if($stmt = mysqli_prepare($mysqli, $sql)){
             // Bind variables to the prepared statement as parameters
             mysqli_stmt_bind_param($stmt, "s", $param_username);
-            
+
             // Set parameters
             $param_username = $username;
-            
+
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
                 // Store result
                 mysqli_stmt_store_result($stmt);
-                
+
                 // Check if username exists, if yes then verify password
                 if(mysqli_stmt_num_rows($stmt) == 1){                    
                     // Bind result variables
@@ -64,49 +64,79 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 echo "Oops! Something went wrong. Please try again later.";
             }
         }
-        
+
         // Close statement
         mysqli_stmt_close($stmt);
     }
-    
+
     // Close connection
     mysqli_close($mysqli);
 }
 ?>
- 
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Login</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="wrapper">
-        <h2>Login</h2>
-        <p>Please fill in your credentials to login.</p>
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/styles.css">
+        <title>CSC 174 | Team Juneau | Assignment 9</title>
+    </head>
+    <body>
 
-            <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
-                <label>Username:<sup>*</sup></label>
-                <input type="text" name="username"class="form-control" value="<?php echo $username; ?>">
-                <span class="help-block"><?php echo $username_err; ?></span>
-            </div>
+        <!-- Start Navigation -->
+        <nav class="main-menu">
+            <span class="logo"><a href="index.php">Team Juneau: Assignment 9</a></span>
+            <ul>
+                <li><a class="menu-link" href="index.php">Go Back</a></li>
+            </ul>
+        </nav>
+        <!-- End Navigation -->
 
-            <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
-                <label>Password:<sup>*</sup></label>
-                <input type="password" name="password" class="form-control">
-                <span class="help-block"><?php echo $password_err; ?></span>
-            </div>
+        <section id="heading">
+            <h1>University of Rochester Dining Services - Admin Login</h1>
+        </section>
 
-            <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Submit">
-            </div>
+        <section id="login-section">
+            <div class="row align-items-center">
+                <div class="column col-md-12 col-sm-12 col-xs-12">
+                    <h2>Login</h2>
+                    <p>Please fill in your credentials to login.</p>
+                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
 
-            <p>Don't have an account? <a href="register.php">Sign up now</a>.</p>
-            
-        </form>
-    </div>    
-</body>
+                        <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
+                            <label>Username:<sup>*</sup></label>
+                            <input type="text" name="username"class="form-control" value="<?php echo $username; ?>">
+                            <span class="help-block"><?php echo $username_err; ?></span>
+                        </div>
+
+                        <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
+                            <label>Password:<sup>*</sup></label>
+                            <input type="password" name="password" class="form-control">
+                            <span class="help-block"><?php echo $password_err; ?></span>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-primary" value="Submit">
+                        </div>
+
+                        <span>Don't have an account? <a href="register.php">Sign up here</a>.</span>
+
+                    </form>
+                </div>
+            </div>  
+        </section>
+
+        <footer id="credits">
+            <h2>Credits</h2>
+            <ul id="footer-ul">
+                <li>Copyright &copy; 2017 - This webpage was created by Team Juneau</li>
+                <li>Here is a reference we used for assignment 9: <a href="http://www.rochester.edu/dining/learn-more/about-us/">U of R Dining Services</a></li>
+                <li>Daniella Bloom, Michelle Bushoy, Jerry Dai, Philip Kallinos</li>
+                <li><a href="login.php">Admin Login/Signup</a></li>
+            </ul>    
+        </footer>
+
+    </body>
 </html>

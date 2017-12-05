@@ -25,17 +25,18 @@ $row = mysqli_fetch_assoc($result)
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>CSC 174 | Team Juneau</title>
-
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/styles.css">
+        <title>CSC 174 | Team Juneau | Assignment 9</title>
     </head>
 
     <body>   
 
         <!-- Start Navigation -->
         <nav class="main-menu">
-            <span class="logo"><a href="#">Team Juneau: Assignment #9</a></span>
+            <span class="logo"><a href="#">Team Juneau: Assignment 9</a></span>
             <ul>
-                <li><a class="menu-link" href="admin.php">Back to Admin</a></li>
+                <li><a class="menu-link" href="admin.php">Go Back</a></li>
             </ul>
         </nav>
         <!-- End Navigation -->
@@ -45,11 +46,11 @@ $row = mysqli_fetch_assoc($result)
         </section>
 
         <section class="confirmation-message">
-
-            <h2> #<?php echo $row["ID"]?>'s Survey Result</h2>
-
             <div class="row align-items-center">
                 <div class="column col-md-12 col-sm-12 col-xs-12">
+                    
+                    <h2> #<?php echo $row["Name"]?>'s Survey Result</h2>
+                    
                     <form method="post" action="update.php">
                         <table>
                             <tr><td>ID:</td><td><input readonly type="text" id="updateid1" name="id" value = "<?php echo $row["ID"]?>"></td></tr>

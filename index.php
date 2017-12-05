@@ -4,13 +4,14 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/styles.css">
         <title>CSC 174 | Team Juneau | Assignment 9</title>
     </head>
     <body>
 
         <!-- Start Navigation -->
         <nav class="main-menu">
-            <span class="logo"><a href="#">Team Juneau: Assignment #9</a></span>
+            <span class="logo"><a href="index.php">Team Juneau: Assignment 9</a></span>
             <ul>
                 <li><span>Go to: </span></li>
                 <li><a class="menu-link" href="#about">About</a></li>
@@ -30,11 +31,11 @@
 
         <section id="about">
             <div class="row align-items-center">
-                <div class="column col-md-6 col-sm-6 col-xs-6">
+                <div class="column col-md-6 col-sm-6 col-xs-12">
                     <h2>About</h2>
-                    <span class="tagline">We have a deep respect for and commitment to protecting and improving the environment while making a positive impact in the lives of our local and global community.</span>
+                    <span class="tagline">We have a deep respect for and commitment to protecting and improving the environment while making a positive impact in the lives of our local and global community. Please let us know how we are doing!</span>
                 </div>
-                <div class="column col-md-6 col-sm-6 col-xs-6">
+                <div class="column col-md-6 col-sm-6 col-xs-12">
                     <button type="button" class="btn btn-info"><a href="#survey">Complete Survey</a></button>
                 </div>
             </div> 
@@ -115,9 +116,7 @@
 
                         <fieldset>
 
-                            <legend>Survey Questionnaire</legend>
-
-                            <h5>1. What is your campus status?</h5>
+                            <h3>1. What is your campus status?</h3>
 
                             <input type="radio" name="status" id="on-campus-select" value="on-campus">
                             <label for="on-campus-select">Student living on campus</label><br>
@@ -134,7 +133,7 @@
                             <input type="radio" name="status" id="other-select1" value="other">
                             <label for="other-select1">Other</label><br>
 
-                            <h5>2. Which dining locations do you visit?</h5>
+                            <h3>2. Which dining locations do you visit?</h3>
 
                             <input type="checkbox" name="location1" id="danforth-check" value="danforth">
                             <label for="danforth-check">Danforth Dining Center</label><br>
@@ -151,7 +150,7 @@
                             <input type="checkbox" name="location5" id="rocky-check" value="rocky">
                             <label for="rocky-check">Rocky's Sub Shop</label><br>
 
-                            <h5>3. Please rate the overall quality of customer service at our dining locations</h5>
+                            <h3>3. Please rate the overall quality of customer service at our dining locations</h3>
 
                             <input type="radio" name="quality" id="excellent-select" value="excellent">
                             <label for="excellent-select">Excellent</label><br>
@@ -165,7 +164,7 @@
                             <input type="radio" name="quality" id="poor-select" value="poor">
                             <label for="poor-select">Poor</label><br>
 
-                            <h5>4. Do you feel dining services is open to student suggestions? </h5>
+                            <h3>4. Do you feel dining services is open to student suggestions? </h3>
 
                             <input type="radio" name="suggestion" id="student-yes" value="yes">
                             <label for="student-yes">Yes</label><br>
@@ -182,7 +181,7 @@
                             <input type="radio" name="suggestion" id="student-na" value="na">
                             <label for="student-na">Not sure</label><br>
 
-                            <h5>5. Does the university provide enough healthy food options?</h5>
+                            <h3>5. Does the university provide enough healthy food options?</h3>
 
                             <input type="radio" name="nutrition" id="nutrition-yes" value="yes">
                             <label for="nutrition-yes">Yes</label><br>
@@ -193,14 +192,14 @@
                             <input type="radio" name="nutrition" id="nutrition-na" value="na">
                             <label for="nutrition-na">Not sure</label><br>
 
-                            <h5>6. Do you have special dietary needs?</h5>
+                            <h3>6. Do you have special dietary needs?</h3>
                             <input type="radio" name="dietary" id="yes-select" value="yes">
                             <label for="yes-select">Yes</label><br>
 
                             <input type="radio" name="dietary" id="no-select" value="no">
                             <label for="no-select">No</label><br>
 
-                            <h5>7. If yes, please indicate which special dietary needs that you have.</h5>
+                            <h3>7. If yes, please indicate which special dietary needs that you have.</h3>
 
                             <input type="radio" name="special-dietary" id="diabetic-diet-select" value="diabetic-diet">
                             <label for="diabetic-diet-select">Diabetic diet</label><br>
@@ -217,7 +216,7 @@
                             <input type="radio" name="special-dietary" id="other-select2" value="other">
                             <label for="other-select2">Other</label><br>
 
-                            <h5>8. How important is it for us to use sustainable foods?</h5>
+                            <h3>8. How important is it for us to use sustainable foods?</h3>
 
                             <input type="radio" name="sustainability" id="very-important" value="very-important">
                             <label for="very-important">Very Important</label><br>
@@ -237,7 +236,7 @@
                         <br>
                         <TEXTAREA name="message" id="message"></TEXTAREA>
                         <br>
-                        <button type="button" class="btn btn-primary"><input type="submit" value="Submit"></button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
 
                     </form>
                 </div>

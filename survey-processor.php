@@ -48,30 +48,30 @@ $message=mysqli_real_escape_string($mysqli, $message);
 
 //perform database query
 $query  = "INSERT INTO `survey_assignment_9`(";
-	$query .= "  `Name`, `Email`, `Telephone`, `CampusStatus`, ";
-	$query .= "  `FoodLocation`, `QualityRate`, `Suggestion`, ";
-	$query .= "  `Healthy`, `DietaryNeeds`, `SpecialDietary`, ";
-	$query .= "  `Sustainability`, `Message`";
-	$query .= ") VALUES (";
-	$query .= "  '{$name}', '{$email}', '{$telephone}', '{$statusselect}', ";
-	$query .= "  '{$location1}, {$location2}, {$location3}, {$location4}, {$location5}', '{$qualityselect}', '{$suggestionselect}',  ";
-	$query .= "  '{$healthyselect}', '{$dietaryselect}', '{$specialdietaryselect}', ";
-	$query .= "  '{$sustainabilityselect}', '{$message}'";
-	$query .= ")";
+$query .= "  `Name`, `Email`, `Telephone`, `CampusStatus`, ";
+$query .= "  `FoodLocation`, `QualityRate`, `Suggestion`, ";
+$query .= "  `Healthy`, `DietaryNeeds`, `SpecialDietary`, ";
+$query .= "  `Sustainability`, `Message`";
+$query .= ") VALUES (";
+$query .= "  '{$name}', '{$email}', '{$telephone}', '{$statusselect}', ";
+$query .= "  '{$location1}, {$location2}, {$location3}, {$location4}, {$location5}', '{$qualityselect}', '{$suggestionselect}',  ";
+$query .= "  '{$healthyselect}', '{$dietaryselect}', '{$specialdietaryselect}', ";
+$query .= "  '{$sustainabilityselect}', '{$message}'";
+$query .= ")";
 
-	$result = mysqli_query($mysqli, $query);
+$result = mysqli_query($mysqli, $query);
 
 if ($result) {
-		echo "Success! - the query didn't error-out";
-	} 
-	else {
-		die("Database query failed.");
-	}
+    echo "Success! - the query didn't error-out";
+    //send the user to the thank you webpage
+    header("Location: survey-thanks.php");
+} 
+else {
+    die("Database query failed.");
+}
 
 //Close database connection
 mysqli_close($mysqli);
 
-//send the user to the thank you webpage
-header("Location: survey-thanks.php");
 
 ?>
