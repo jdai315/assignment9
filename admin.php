@@ -114,7 +114,7 @@ $result = mysqli_query($mysqli,$sql);
                         <h4>Enter an ID to delete a record below:</h4>
                         <form method="post" action="delete.php">
                             <input type="text" id="id" name="id">
-                            <input type="submit" id="submit1" name="submit" value="Delete Records!">
+                            <input type="submit" id="submit1" name="submit" value="Delete Records!" onclick="return confirm('Delete record?')">
                         </form>
                     </div>
                 </div>
@@ -125,7 +125,7 @@ $result = mysqli_query($mysqli,$sql);
                         <h4>Enter an ID to update a record below:</h4>
                         <form method="post" action="updaterecords.php">
                             <input type="text" id="id" name="id">
-                            <input type="submit" id="submit2" name="submit" value="Update Records!">
+                            <input type="submit" id="submit2" name="submit" value="Update Records!" onclick="return confirm('Update record?')">
                         </form>
                     </div>
                 </div>
