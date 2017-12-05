@@ -25,8 +25,13 @@ h1, h3, h4 {
 
 .credits{padding-top:30px;
 	padding-bottom:30px;
-	padding-left:30px;}
-	
+	padding-left:30px;
+}
+
+.credits ul{
+	list-style:none;
+}
+
 .submit{padding-bottom:15px;}
 
 .heading{padding-top:50px;
