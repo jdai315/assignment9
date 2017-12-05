@@ -100,7 +100,7 @@ $result = mysqli_query($mysqli,$sql);
                 <div class="column col-md-4 col-sm-6 col-xs-12">
                     <div class="option">
                         <h3>View Entry</h3>
-                        <h4>Enter an ID to search for a record below:</h4>
+                        <h4>Enter an ID to view a record below:</h4>
                         <form method="post" action="records.php">
                             <input type="text" id="id" name="id">
                             <input type="submit" id="submit" name="submit" value="View Records!">
