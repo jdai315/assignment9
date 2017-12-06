@@ -1,10 +1,12 @@
-
 #infotable{
-overflow-y:scroll; 
-overflow-x:scroll; 
-height:400px; 
-width:500px;
-display:block; 
+    overflow-y:scroll; 
+    overflow-x:scroll; 
+    max-height:400px; 
+    max-width:880px;
+    height: 100%;
+    width: 100%;
+    display:block; 
+    margin: 0 auto;
 }
 
 table thead {
@@ -12,89 +14,156 @@ table thead {
     position: sticky;
     top: 0;
     z-index: 5;
-    background-color:black;
+    background-color:#034688;
     color:white;
 }
 
-
-.main-menu .logo{text-align:left;}
-.main-menu{
-	position: fixed; /* required - magic */
-	top: 0; /* menu stays fixed at the top */
-	text-align:right;
-	background-color:#034688;
-	    width: 100%; /* required - makes the menu go all the way across the 
-    viewport */
-    z-index: 1000;
-
-	
+table thead th {
+    min-width: 100px;
 }
 
-   .logo {
+.main-menu{
+    position: fixed; /* required - magic */
+    top: 0; /* menu stays fixed at the top */
+    margin: 0;
+    padding: 0;
+    text-align:right;
+    background-color:#034688;
+    font-size: 18px;
+    height: 50px;
+    width: 100%; /* required - makes the menu go all the way across the 
+    viewport */
+    z-index: 1000;
+}
+
+.logo {
     margin: 0;
     padding: 0;
     float: left;
-    height: 30px;
+    height: 50px;
     text-transform: uppercase;
-    font-size: 18px;
+}
+
+.main-menu ul {
+    margin: 0;
+    padding: 0;
 }
 
 .main-menu li{
-	display: inline-block;
-	border:1px solid white;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    height: 50px;
 }
 
 .main-menu a{
-	color: white;
-	display: block;
-	padding: 10px 30px 10px 30px;
-	text-decoration:none;
-	background-color:#034688;
+    margin: 0 auto;
+    padding: 0;
+    height: 100%;
+    color: white;
+    display: block;
+    padding: 10px 30px 10px 30px;
+    text-decoration:none;
+    background-color:#034688;
 }
 
 .main-menu a:hover{
-	color:black;
-	background-color:#FFFF00;
+    color:black;
+    background-color:#FFFF00;
 }
 
 .main-menu li a.current{
-	color:white;
-	background-color:#FFFF00;
+    color:white;
+    background-color:#FFFF00;
 }
-.dining{padding-left:250px}
 
 
-.f-image{padding-left:30px;}
+#main-image {
+    position: relative;
+    z-index: 0;
+    max-height: 540px;
+    overflow: hidden;
+}
 
-div{padding-right:40px;}
+.dining{
+    margin: 0 auto;
+    position: relative;
+    z-index; 1;
+    padding: 0;
+    width: 100%;
+    height: auto;
+}
 
-.image-overlay{padding-left:30px;}
+.image-overlay{
+    position: absolute;
+    z-index: 2;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(0%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.image-overlay-text {
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.image-overlay h1 {
+    color: white;
+}
 
 .tag{padding-left:30px;}
 
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-.button{text-align:right;
-width: 100%; /* required - makes the menu go all the way across the 
-    viewport */
+.btn {
+    text-align: center;
+    margin: 0 auto;
     display: block;
-    padding:0;
-  }
-    
-    
-.button a{
-	color: white;
-	display: block;
-	padding: 10px 30px 10px 30px;
-	text-decoration:none;
-	background-color:#034688;
-	display: inline-block;
-	border:1px solid white;
-	
+    margin: 20px;
+    text-decoration:none;
+    background-color: #034688;
+    color: white;
+    font-size: 24px;
+    border:1px solid white;
 }
 
-
-
-.button a:hover{color:black;
-	background-color:#FFFF00;
+.btn-secondary {
+    background-color: white !important;
+    color: black;
 }
 
+.btn a {
+    text-decoration: none;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    color: white;
+}
+
+.btn:hover, .btn:hover a {
+    cursor: pointer;
+    background-color:#FFFF00;
+    color: black !important;
+}
+
+.btn:hover a {
+    transition-delay: 1ms; /* delays for 1 second */
+    -webkit-transition-delay: 1ms; /* for Safari & Chrome */
+    -webkit-transition: all 600ms ease;
+    -moz-transition: all 600ms ease;
+    -ms-transition: all 600ms ease;
+    -o-transition: all 600ms ease;
+    transition: all 600ms ease;
+}

@@ -22,31 +22,33 @@ $row = mysqli_fetch_assoc($result)
 ?>
 
 <?php
-$currentTitle = "CSC 174 | Team Juneau | Assignment 9";
+    $currentTitle = "CSC 174 | Team Juneau | Assignment 9";
 include "inc/top.inc";
 ?>
 
-    <body>   
+<body>   
 
-        <!-- Start Navigation -->
-        <nav class="main-menu">
-            <span class="logo"><a href="#">Team Juneau: Assignment 9</a></span>
-            <ul>
-                <li><a class="menu-link" href="admin.php">Go Back</a></li>
-            </ul>
-        </nav>
-        <!-- End Navigation -->
+    <!-- Start Navigation -->
+    <nav class="main-menu">
+        <span class="logo"><a href="#">Team Juneau: Assignment 9</a></span>
+        <ul>
+            <li><a class="menu-link" href="admin.php">Go Back</a></li>
+        </ul>
+    </nav>
+    <!-- End Navigation -->
 
+    <div class="container">
         <section id="heading">
-            <h1>University of Rochester Dining Services - Update Record #<?php echo $row["ID"]?></h1>
+            <h1>University of Rochester Dining Services</h1>
+            <h2>Update Record #<?php echo $row["ID"]?></h2>
         </section>
 
         <section class="confirmation-message">
             <div class="row align-items-center">
                 <div class="column col-md-12 col-sm-12 col-xs-12">
-                    
-                    <h2> #<?php echo $row["Name"]?>'s Survey Result</h2>
-                    
+
+                    <h2><?php echo $row["Name"]?>'s Survey Result</h2>
+
                     <form method="post" action="update.php">
                         <table>
                             <tr><td>ID:</td><td><input readonly type="text" id="updateid1" name="id" value = "<?php echo $row["ID"]?>"></td></tr>
@@ -59,8 +61,10 @@ include "inc/top.inc";
 
                             <legend>Survey Questionnaire</legend>
 
+                            <br>
                             <h4>1. What is your campus status?</h4>
-                            <h5>Previous Answer: <?php echo $row["CampusStatus"]?></h5><br>
+                            <h5>Previous Answer: <?php echo $row["CampusStatus"]?></h5>
+                            <br>
 
                             <input type="radio" name="status" id="on-campus-select" value="on-campus">
                             <label for="on-campus-select">Student living on campus</label><br>
@@ -77,9 +81,10 @@ include "inc/top.inc";
                             <input type="radio" name="status" id="other-select1" value="other">
                             <label for="other-select1">Other</label><br>
 
-
+                            <br>
                             <h4>2. Which dining locations do you visit?</h4>
-                            <h5>Previous Answer: <?php echo $row["FoodLocation"]?></h5><br>
+                            <h5>Previous Answer: <?php echo $row["FoodLocation"]?></h5>
+                            <br>
 
                             <input type="checkbox" name="location1" id="danforth-check" value="danforth">
                             <label for="danforth-check">Danforth Dining Center</label><br>
@@ -96,8 +101,10 @@ include "inc/top.inc";
                             <input type="checkbox" name="location5" id="rocky-check" value="rocky">
                             <label for="rocky-check">Rocky's Sub Shop</label><br>
 
-                            <h5>3. Please rate the overall quality of customer service at our dining locations</h5>
-                            <h5>Previous Answer: <?php echo $row["QualityRate"]?></h5><br>
+                            <br>
+                            <h4>3. Please rate the overall quality of customer service at our dining locations</h4>
+                            <h5>Previous Answer: <?php echo $row["QualityRate"]?></h5>
+                            <br>
 
                             <input type="radio" name="quality" id="excellent-select" value="excellent">
                             <label for="excellent-select">Excellent</label><br>
@@ -111,8 +118,10 @@ include "inc/top.inc";
                             <input type="radio" name="quality" id="poor-select" value="poor">
                             <label for="poor-select">Poor</label><br>
 
+                            <br>
                             <h4>4. Do you feel dining services is open to student suggestions? </h4>
-                            <h5>Previous Answer: <?php echo $row["Suggestion"]?></h5><br>
+                            <h5>Previous Answer: <?php echo $row["Suggestion"]?></h5>
+                            <br>
 
                             <input type="radio" name="suggestion" id="student-yes" value="yes">
                             <label for="student-yes">Yes</label><br>
@@ -129,8 +138,10 @@ include "inc/top.inc";
                             <input type="radio" name="suggestion" id="student-na" value="na">
                             <label for="student-na">Not sure</label><br>
 
+                            <br>
                             <h4>5. Does the university provide enough healthy food options?</h4>
-                            <h5>Previous Answer: <?php echo $row["Healthy"]?></h5><br>
+                            <h5>Previous Answer: <?php echo $row["Healthy"]?></h5>
+                            <br>
 
                             <input type="radio" name="nutrition" id="nutrition-yes" value="yes">
                             <label for="nutrition-yes">Yes</label><br>
@@ -141,16 +152,20 @@ include "inc/top.inc";
                             <input type="radio" name="nutrition" id="nutrition-na" value="na">
                             <label for="nutrition-na">Not sure</label><br>
 
+                            <br>
                             <h4>6. Do you have special dietary needs?</h4>
                             <h5>Previous Answer: <?php echo $row["DietaryNeeds"]?></h5><br>
                             <input type="radio" name="dietary" id="yes-select" value="yes">
-                            <label for="yes-select">Yes</label><br>
+                            <label for="yes-select">Yes</label>
+                            <br>
 
                             <input type="radio" name="dietary" id="no-select" value="no">
                             <label for="no-select">No</label><br>
 
+                            <br>
                             <h4>7. If yes, please indicate which special dietary needs that you have.</h4>
-                            <h5>Previous Answer: <?php echo $row["SpecialDietary"]?></h5><br>
+                            <h5>Previous Answer: <?php echo $row["SpecialDietary"]?></h5>
+                            <br>
 
                             <input type="radio" name="special-dietary" id="diabetic-diet-select" value="diabetic-diet">
                             <label for="diabetic-diet-select">Diabetic diet</label><br>
@@ -167,8 +182,10 @@ include "inc/top.inc";
                             <input type="radio" name="special-dietary" id="other-select2" value="other">
                             <label for="other-select2">Other</label><br>
 
+                            <br>
                             <h4>8. How important is it for us to use sustainable foods?</h4>
-                            <h5>Previous Answer: <?php echo $row["Sustainability"]?></h5><br>
+                            <h5>Previous Answer: <?php echo $row["Sustainability"]?></h5>
+                            <br>
 
                             <input type="radio" name="sustainability" id="very-important" value="very-important">
                             <label for="very-important">Very Important</label><br>
@@ -184,13 +201,16 @@ include "inc/top.inc";
 
                         </fieldset>
 
+                        <br>
                         <label for="message" >Any other comments, questions or concerns?</label>
-                        <h5>Pervious Answer: <?php echo $row["Message"]?></h5>
+                        <h5>Previous Answer: <?php echo $row["Message"]?></h5>
+                        <br>
 
                         <TEXTAREA name="message" id="message"></TEXTAREA>
                         <br>
-                        <button type="button" class="btn btn-primary"><input type="submit" value="Submit" onclick="return confirm('Are you sure you want to update?')"></button>
-
+                        <div class="button">
+                            <input class="btn btn-primary" type="submit" value="Submit" onclick="return confirm('Are you sure you want to update?')">
+                        </div>
                     </form>  
 
                     <a href="admin.php">Go Back to Admin Page</a>
@@ -198,15 +218,15 @@ include "inc/top.inc";
             </div>
         </section>
 
-<?php
-include "inc/footer.inc";
-?>
+        <?php
+    include "inc/footer.inc";
+        ?>
 
-    </body>
-</html>
+        </body>
+    </html>
 
 <?php
-    mysqli_free_result($result);
+mysqli_free_result($result);
 //close database connection
 mysqli_close($mysqli);
 ?>

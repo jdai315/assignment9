@@ -1,3 +1,4 @@
+ </div><!-- close container -->
  <footer class="credits" id="credits">
             <h2>Credits</h2>
             <ul id="footer-ul">
@@ -9,3 +10,4 @@
                 <li><a href="login.php">Admin Login/Signup</a></li>
             </ul>    
         </footer>
+        

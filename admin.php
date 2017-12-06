@@ -22,20 +22,22 @@ include "inc/top.inc";
 ?>
 
 
-    <body>   
+<body>   
 
-        <!-- Start Navigation -->
-        <nav class="main-menu">
-            <span class="logo"><a href="index.php">Team Juneau: Assignment 9</a></span>
-            <ul>
-                <li><a class="menu-link" href="index.php">Back to Survey</a></li>
-                <li><a class="menu-link" href="logout.php">Logout</a></li>
-            </ul>
-        </nav>
-        <!-- End Navigation -->
+    <!-- Start Navigation -->
+    <nav class="main-menu">
+        <span class="logo"><a href="index.php">Team Juneau: Assignment 9</a></span>
+        <ul>
+            <li><a class="menu-link" href="index.php">Back to Survey</a></li>
+            <li><a class="menu-link" href="logout.php">Logout</a></li>
+        </ul>
+    </nav>
+    <!-- End Navigation -->
 
+    <div class="container">
         <section id="heading">
-            <h1>University of Rochester Dining Services - Admin Page</h1>
+            <h1>University of Rochester Dining Services</h1>
+            <h2>Admin Page</h2>
         </section>
 
         <section id="database-table">
@@ -98,7 +100,9 @@ include "inc/top.inc";
                         <h4>Enter an ID to view a record below:</h4>
                         <form method="post" action="records.php">
                             <input type="text" id="id" name="id">
-                            <input type="submit" id="submit" name="submit" value="View Records!">
+                            <div class="button">
+                                <input type="submit" id="submit" class="btn btn-primary" name="submit" value="View Records!">
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -109,7 +113,9 @@ include "inc/top.inc";
                         <h4>Enter an ID to delete a record below:</h4>
                         <form method="post" action="delete.php">
                             <input type="text" id="id" name="id">
-                            <input type="submit" id="submit1" name="submit" value="Delete Records!" onclick="return confirm('Are you sure you want to delete?')">
+                            <div class="button">
+                                <input type="submit" id="submit1" class="btn btn-primary" name="submit" value="Delete Records!" onclick="return confirm('Are you sure you want to delete?')">
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -120,18 +126,20 @@ include "inc/top.inc";
                         <h4>Enter an ID to update a record below:</h4>
                         <form method="post" action="updaterecords.php">
                             <input type="text" id="id" name="id">
-                            <input type="submit" id="submit2" name="submit" value="Update Records!">
+                            <div class="button">
+                                <input type="submit" id="submit2" class="btn btn-primary" name="submit" value="Update Records!">
+                            </div>
                         </form>
                     </div>
                 </div>
 
             </div>
         </section>
-<?php
-include "inc/footer.inc";
-?>
-</body>
-</html>
+        <?php
+        include "inc/footer.inc";
+        ?>
+        </body>
+    </html>
 
 <?php
 // close database connection

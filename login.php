@@ -79,52 +79,54 @@ $currentTitle = "CSC 174 | Team Juneau | Assignment 9";
 include "inc/top.inc";
 ?>
 
-        <!-- Start Navigation -->
-        <nav class="main-menu">
-            <span class="logo"><a href="index.php">Team Juneau: Assignment 9</a></span>
-            <ul>
-                <li><a class="menu-link" href="index.php">Go Back</a></li>
-            </ul>
-        </nav>
-        <!-- End Navigation -->
+<!-- Start Navigation -->
+<nav class="main-menu">
+    <span class="logo"><a href="index.php">Team Juneau: Assignment 9</a></span>
+    <ul>
+        <li><a class="menu-link" href="index.php">Go Back</a></li>
+    </ul>
+</nav>
+<!-- End Navigation -->
 
-        <section class="heading" id="heading">
-            <h1>University of Rochester Dining Services - Admin Login</h1>
-        </section>
+<div class="container">
+    <section id="heading">
+        <h1>University of Rochester Dining Services</h1>
+        <h2>Admin Login</h2>
+    </section>
 
-        <section class="login" id="login-section">
-            <div class="row align-items-center">
-                <div class="column col-md-12 col-sm-12 col-xs-12">
-                    <h2>Login</h2>
-                    <p>Please fill in your credentials to login.</p>
-                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+    <section id="login-section">
+        <div class="row align-items-center">
+            <div class="column col-md-12 col-sm-12 col-xs-12">
+                <h2>Login</h2>
+                <p>Please fill in your credentials to login.</p>
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
 
-                        <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
-                            <label>Username:<sup>*</sup></label>
-                            <input type="text" name="username"class="form-control" value="<?php echo $username; ?>">
-                            <span class="help-block"><?php echo $username_err; ?></span>
-                        </div>
+                    <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
+                        <label>Username:<sup>*</sup></label>
+                        <input type="text" name="username"class="form-control" value="<?php echo $username; ?>">
+                        <span class="help-block"><?php echo $username_err; ?></span>
+                    </div>
 
-                        <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
-                            <label>Password:<sup>*</sup></label>
-                            <input type="password" name="password" class="form-control">
-                            <span class="help-block"><?php echo $password_err; ?></span>
-                        </div>
+                    <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
+                        <label>Password:<sup>*</sup></label>
+                        <input type="password" name="password" class="form-control">
+                        <span class="help-block"><?php echo $password_err; ?></span>
+                    </div>
 
-                        <div class="form-group">
-                            <input type="submit" class="btn btn-primary" value="Submit">
-                        </div>
+                    <div class="button">
+                        <input type="submit" class="btn btn-primary" value="Submit">
+                    </div>
 
-                        <span>Don't have an account? <a href="register.php">Sign up here</a>.</span>
+                    <span>Don't have an account? <a href="register.php">Sign up here</a>.</span>
 
-                    </form>
-                </div>
-            </div>  
-        </section>
+                </form>
+            </div>
+        </div>  
+    </section>
 
-<?php
-include "inc/footer.inc";
-?>
+    <?php
+    include "inc/footer.inc";
+    ?>
 
     </body>
 </html>

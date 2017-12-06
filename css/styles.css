@@ -1,50 +1,224 @@
+body{background-color:rgba(0,0,0,0.1);}
 
-
-Body{background-color:#cacaca;}
-
-h1,h2,h3{color:#02386d;}
-
-.surv{
-	background-color:#FFFF00;
-    margin: 0;
-    padding-left: 30px;
-    font-family:'lato', sans-serif;
+.container {
+    max-width: 1000px;
+    padding: 0;
+    background-color: whitesmoke;
 }
-label {
-	font-family: 'Lato', sans-serif;
-	letter-spacing: 1px;
+
+.row {
+    padding: 30px;
+}
+
+.column {
+    padding: 0;
+}
+
+hr {
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    margin-top: 50px;
+}
+
+h1, h2, h3, h4 {
+    color:#02386d;
+    font-family: 'Nunito', sans-serif;
+    letter-spacing:2px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+h2, h3, h4 {
+    padding: 20px;
+    padding-bottom: 0;
+}
+
+p {
+    margin: 0;
+    padding: 20px;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+#about {
+    padding-top: 0;
+    margin-top: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+#information p {
+    letter-spacing: 0.003em;
     line-height: 1.75em;
 }
 
-.surv h2{text-align:center;
-	padding-top:20px;
-	padding-bottom:20px;}
-
-
-h1, h3, h4 {
-	font-family: 'Nunito', sans-serif;
-	letter-spacing:2px;
-	padding-bottom: 15px;
-	margin-top: 10px;
+#survey {
+    margin: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family:'lato', sans-serif;
+    background-color: white;
 }
 
-.credits{padding-top:30px;
-	padding-bottom:30px;
-	padding-left:30px;
+#survey label {
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 1px;
+    line-height: 1.75em;
 }
 
-.credits ul{
+#survey h2{text-align:center;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+#survey h3 {
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+#survey label, #survey input {
+    padding-left: 20px;
+}
+
+#survey fieldset {
+    padding-bottom: 20px;
+}
+
+#survey textarea {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#credits {
+    background-color:#034688;
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+#credits h2 {
+    text-align: center;
+    color: white;
+    padding-bottom: 20px;
+}
+
+#credits a {
+    color: #FFFF00;
+}
+
+#credits .credits{
+    padding: 50px;
+}
+
+#credits ul{
+    margin: 0;
+    padding: 0;
 	list-style:none;
 }
 
-.submit{padding-bottom:15px;}
+#credits li{
+    text-align: center;
+    padding: 5px;
+}
 
-.heading{padding-top:50px;
-	text-align:center;}
-	
-.login{padding-left:30px;}
-.container {
-    max-width: 1200px;
+#heading{
+    padding-top:50px;
+    text-align:center;
+}
+
+#login-section{
+    margin-top: 0;
+    padding-top: 0;
+    text-align: center;
+}
+
+#login-section .form-group input {
+    margin: 0 auto;
+    width: 50%;
+}
+
+#database-table, #database-options {
+    margin-top: 0;
+    padding-top: 0;
+    text-align: center;
+}
+
+#database-table h2 {
+    padding-bottom: 20px;
+}
+
+#database-options h4 {
+    padding-bottom: 20px;
+    color: black;
+}
+
+#database-options input {
+    padding: 5px;
+    margin: 10px;
+}
+
+.confirmation-message {
+    padding-top: 0;
+    margin-top: 0;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.confirmation-message h2 {
+    padding-bottom: 50px;
+}
+
+.confirmation-message a {
+    font-size: 24px;
+}
+
+.confirmation-message table {
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.confirmation-message table tr {
+    height: 50px;
+}
+
+.confirmation-message table td {
+    min-width: 200px;
+}
+
+.confirmation-message table td:first-child {
+    background-color: #034688;
+    color: white;
+}
+
+.confirmation-message table input {
+    height: 50px;
     padding: 0;
-    margin-top: 80px;
+    padding-left: 10px;
+}
+
+.confirmation-message h5 {
+    padding-top: 10px;
+    font-size: 18px;
 }

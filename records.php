@@ -36,19 +36,21 @@ $currentTitle = "CSC 174 | Team Juneau | Assignment 9";
 include "inc/top.inc";
 ?>
 
-    <body>   
+<body>   
 
-        <!-- Start Navigation -->
-        <nav class="main-menu">
-            <span class="logo"><a href="#">Team Juneau: Assignment 9</a></span>
-            <ul>
-                <li><a class="menu-link" href="admin.php">Go Back</a></li>
-            </ul>
-        </nav>
-        <!-- End Navigation -->
+    <!-- Start Navigation -->
+    <nav class="main-menu">
+        <span class="logo"><a href="#">Team Juneau: Assignment 9</a></span>
+        <ul>
+            <li><a class="menu-link" href="admin.php">Go Back</a></li>
+        </ul>
+    </nav>
+    <!-- End Navigation -->
 
+    <div class="container">
         <section id="heading">
-            <h1>University of Rochester Dining Services - View Record #<?php echo $row["ID"]?></h1>
+            <h1>University of Rochester Dining Services</h1>
+            <h2>View Record #<?php echo $row["ID"]?></h2>
         </section>
 
         <section class="confirmation-message">
@@ -75,17 +77,19 @@ include "inc/top.inc";
 
                     </table>
 
-                    <a href="admin.php">Go Back to Admin Page</a>
+                    <div class="button">
+                        <a class="btn btn-primary" href="admin.php">Go Back to Admin Page</a>
+                    </div>
                 </div>
             </div>
         </section>
 
-<?php
-include "inc/footer.inc";
-?>
+        <?php
+        include "inc/footer.inc";
+        ?>
 
-    </body>
-</html>
+        </body>
+    </html>
 
 <?php
 mysqli_free_result($result);
